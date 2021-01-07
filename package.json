@@ -1,0 +1,23 @@
+{
+  "name": "sulbing",
+  "version": "1.0.0",
+  "description": "This is the SulbingBot",
+  "main": "SnowBot.js",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snow35/sulbing.git"
+  },
+  "author": "Hee Sul Shin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snow35/sulbing/issues"
+  },
+  "homepage": "https://github.com/snow35/sulbing#readme"
+}
