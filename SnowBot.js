@@ -81,6 +81,10 @@ client.on('message', message => {
 	else if ( message.content === '!빙수메뉴판' || message.content === '!빙수' || message.content === '!메뉴판') {
 		message.channel.send(Icelist);
 	}
+
+	else if ( message.content === '!이모지'){
+		message.channel.send(':elonHelp:');
+	}
 });
 
 
