@@ -23,7 +23,7 @@ const OreaoIceInfo = new Discord.MessageEmbed()
 		{ name: '영양성분', value: '열량 : 1345kcal\n당류 : 111g\n단백질 : 23g\n포화지방 : 29g\n나트륨 : 715mg'}
 	);
 
-const WarrStrawSulbing = new Discord.MessageEmbed()
+const WarrStrawSulbingInfo = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('와르르생딸기설빙 info *시즌한정제품*')
 	.attachFiles(['/Users/Snow35/Documents/GitHub/sulbing/img/WarrSulbing.png'])
@@ -48,7 +48,7 @@ const Icelist = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('등록된 빙수 종류입니다(추가중입니당)')
 	.addFields(
-		{ name: '빙수이름 : 가격(원)', value: '인절미설밍 : 7,900원\n오레오초코몬스터설빙(오레오설빙) : 11,900원'},
+		{ name: '빙수이름 : 가격(원)', value: '인절미설밍 : 7,900원\n오레오초코몬스터설빙(오레오설빙) : 11,900원\n와르르생딸기설빙(기간한정!) : 11,500원'},
 		
 	);
 
@@ -64,6 +64,10 @@ client.on('message', message => {
 
 	if (message.content === '!빙수정보 인절미설빙') {
 		message.channel.send(mainIceInfo);
+	}
+
+	if (message.content === '!빙수정보 와르르생딸기설빙') {
+		message.channel.send(WarrStrawSulbingInfo);
 	}
 
 	if (message.content === '!빙수정보 오레오초코몬스터설빙' || message.content === '!빙수정보 오래오초코몬스터설빙' || message.content === '!빙수정보 오래오설빙' || message.content === '!빙수정보 오레오설빙' || message.content === '!빙수정보 오레오초코몬스터설빙(오레오설빙)') {
