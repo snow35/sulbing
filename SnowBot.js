@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const mainIceInfo = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('인절미설빙 info')
-	.attachFiles(['/Users/Snow35/Documents/GitHub/sulbing/Profile.jpg'])
+	.attachFiles(['/Users/Snow35/Documents/GitHub/sulbing/img/Profile.jpg'])
 	.setImage('attachment://Profile.jpg')
 	.addFields(
 		{ name: '제품명', value: '인절미설빙'},
@@ -15,7 +15,7 @@ const mainIceInfo = new Discord.MessageEmbed()
 const OreaoIceInfo = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('오레오초코몬스터설빙(오레오설빙) info')
-	.attachFiles(['/Users/Snow35/Documents/GitHub/sulbing/Oreao.jpg'])
+	.attachFiles(['/Users/Snow35/Documents/GitHub/sulbing/img/Oreao.jpg'])
 	.setImage('attachment://Oreao.jpg')
 	.addFields(
 		{ name: '제품명', value: '오레오초코몬스터설빙'},
