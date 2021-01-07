@@ -34,6 +34,17 @@ const WarrStrawSulbingInfo = new Discord.MessageEmbed()
 		{ name: '영양성분', value: '열량 : 730kcal\n당류 : 96g\n단백질 : 14g\n포화지방 : 20g\n나트륨 : 170mg'}
 	);
 
+const NotToEatInfo = new Discord.MessageEmbed()
+	.setColor('#ddbea9')
+	.setTitle('민트초코설빙 info')
+	.attachFiles(['img/NotToEat.png'])
+	.setImage('attachment://NotToEat.png')
+	.addFields(
+		{ name: '제품명', value: '민트초코설빙'},
+		{ name: '가격', value: '10,900원'},
+		{ name: '영양성분', value: '열량 : 1205kcal\n당류 : 93g\n단백질 : 18g\n포화지방 : 28g\n나트륨 : 440mg'}
+	);
+
 
 const BotcommandHelp = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
@@ -72,6 +83,10 @@ client.on('message', message => {
 
 	else if (message.content === '!빙수정보 오레오초코몬스터설빙' || message.content === '!빙수정보 오래오초코몬스터설빙' || message.content === '!빙수정보 오래오설빙' || message.content === '!빙수정보 오레오설빙' || message.content === '!빙수정보 오레오초코몬스터설빙(오레오설빙)') {
 		message.channel.send(OreaoIceInfo);
+	}
+
+	else if (message.content === '!빙수정보 민트초코설빙' || message.content === '!빙수정보 외계음식') {
+		message.channel.send(NotToEatInfo);
 	}
 
 	else if ( message.content === '!점장' || message.content === '!점장님' || message.content === '!점장나와!') {
