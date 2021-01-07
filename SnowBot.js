@@ -62,23 +62,23 @@ client.on('message', message => {
 		message.channel.send('Pong');
 	}
 
-	if (message.content === '!빙수정보 인절미설빙') {
+	else if (message.content === '!빙수정보 인절미설빙') {
 		message.channel.send(mainIceInfo);
 	}
 
-	if (message.content === '!빙수정보 와르르생딸기설빙') {
+	else if (message.content === '!빙수정보 와르르생딸기설빙') {
 		message.channel.send(WarrStrawSulbingInfo);
 	}
 
-	if (message.content === '!빙수정보 오레오초코몬스터설빙' || message.content === '!빙수정보 오래오초코몬스터설빙' || message.content === '!빙수정보 오래오설빙' || message.content === '!빙수정보 오레오설빙' || message.content === '!빙수정보 오레오초코몬스터설빙(오레오설빙)') {
+	else if (message.content === '!빙수정보 오레오초코몬스터설빙' || message.content === '!빙수정보 오래오초코몬스터설빙' || message.content === '!빙수정보 오래오설빙' || message.content === '!빙수정보 오레오설빙' || message.content === '!빙수정보 오레오초코몬스터설빙(오레오설빙)') {
 		message.channel.send(OreaoIceInfo);
 	}
 
-	if ( message.content === '!점장' || message.content === '!점장님' || message.content === '!점장나와!') {
+	else if ( message.content === '!점장' || message.content === '!점장님' || message.content === '!점장나와!') {
 		message.channel.send(BotcommandHelp);
 	}
 
-	if ( message.content === '!빙수메뉴판' || message.content === '!빙수' || message.content === '!메뉴판') {
+	else if ( message.content === '!빙수메뉴판' || message.content === '!빙수' || message.content === '!메뉴판') {
 		message.channel.send(Icelist);
 	}
 });
