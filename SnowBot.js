@@ -23,6 +23,18 @@ const OreaoIceInfo = new Discord.MessageEmbed()
 		{ name: '영양성분', value: '열량 : 1345kcal\n당류 : 111g\n단백질 : 23g\n포화지방 : 29g\n나트륨 : 715mg'}
 	);
 
+const WarrStrawSulbing = new Discord.MessageEmbed()
+	.setColor('#ddbea9')
+	.setTitle('와르르생딸기설빙 info *시즌한정제품*')
+	.attachFiles(['/Users/Snow35/Documents/GitHub/sulbing/img/WarrSulbing.png'])
+	.setImage('attachment://WarrSulbing.png')
+	.addFields(
+		{ name: '제품명', value: '와르르생딸기설빙'},
+		{ name: '가격', value: '11,500원'},
+		{ name: '영양성분', value: '열량 : 730kcal\n당류 : 96g\n단백질 : 14g\n포화지방 : 20g\n나트륨 : 170mg'}
+	);
+
+
 const BotcommandHelp = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('인절미빙수 봇 명령어입니다')
