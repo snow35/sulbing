@@ -2,7 +2,15 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var requestURL = 'https://github.com/snow35/sulbing/blob/master/menu.json';
 var request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open('GET', "https://github.com/snow35/sulbing/blob/master/menu.json");
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+	var menuboard = request.response;
+	populateHeader(menuboard);
+	showHeroes(menuboard);
+}
 
 
 //빙수정보
