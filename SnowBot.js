@@ -142,7 +142,7 @@ client.on('message', message => {
 		message.channel.send("<@"+message.author+">님")
 	}
 
-	else if (message.content.slice(0,6) === '!빙수주문') {
+	else if (message.content.slice(0,5) === '!빙수주문') {
 		message.channel.send("<@"+message.author+">님")
 		message.channel.send(message.content.slice(6,)+"주문되었습니다")
 	}	
