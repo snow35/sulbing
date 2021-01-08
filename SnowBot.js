@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL = 'https://github.com/snow35/sulbing/blob/master/menu.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 
