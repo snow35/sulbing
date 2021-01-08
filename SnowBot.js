@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+
 
 //빙수정보
 const mainIceInfo = new Discord.MessageEmbed() //인절미설빙
