@@ -136,6 +136,11 @@ client.on('message', message => {
 	else if ( message.content === '!빙수메뉴판' || message.content === '!빙수' || message.content === '!메뉴판') {
 		message.channel.send(Icelist);
 	}
+
+	//멘션 테스트
+	else if (message.content === '!호출') {
+		message.channel.send(message.author.mention+"님")
+	}
 });
 
 
