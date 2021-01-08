@@ -141,6 +141,10 @@ client.on('message', message => {
 	else if (message.content === '!호출') {
 		message.channel.send(message.author.mention+"님")
 	}
+
+	else if (message.content === '!빙수주문 민트초코설빙') {
+		message.channel.send("선넘네...")
+	}
 });
 
 
