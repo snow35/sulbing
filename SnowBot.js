@@ -163,7 +163,9 @@ client.on('message', message => {
 		message.channel.send("소요시간은 약3~5분 입니다")
 	}	
 
-
+	else if (message.content === '!루님화이팅') {
+		message.channel.send("루님화이티이잉!")
+	}
 	
 });
 
