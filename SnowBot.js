@@ -91,7 +91,7 @@ const Icelist = new Discord.MessageEmbed()
 	.setTitle('등록된 빙수 종류입니다(막힘, 암튼 못 쓰는거임)')
 	//.addFields(dict); 
 
-console.log(dict);
+//console.log(dict);
 
 //테스트 코드
 client.on('ready', () => {
