@@ -9,6 +9,7 @@ request.responseType = 'json';
 request.send();
 
 request.onload = function() {
+	console.log(request);
 		var menuboard = request.response; //<-- 여기 있는디 왜징 menuboard is not defined 라고 나와서..
 
 		for (let i = 0; i < 11; i++) {
