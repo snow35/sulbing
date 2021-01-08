@@ -88,7 +88,7 @@ const BotcommandHelp = new Discord.MessageEmbed()
 //메뉴판
 const Icelist = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
-	.setTitle('등록된 빙수 종류입니다(추가중입니당)')
+	.setTitle('등록된 빙수 종류입니다(막힘, 암튼 못 쓰는거임)')
 	.addFields(dict); 
 
 console.log(dict);
