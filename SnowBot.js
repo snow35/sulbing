@@ -1,24 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var requestURL = 'https://raw.githubusercontent.com/snow35/sulbing/master/menu.json';
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var request = new XMLHttpRequest();
-var dict = {};
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+const fs = require('fs');
 
-request.onload = function() {
+let json = fs.readFileSync('menu.json');
 
-    var menuboard = JSON.parse(request.responseText); //<-- 여기 있는디 왜징 menuboard is not defined 라고 나와서..
-    for (let i = 0; i < menuboard["bingSu"].length; i++) {
-        dict[i] = {
-                    'name':menuboard["bingSu"][i]['name'],
-                    'value':menuboard["bingSu"][i]['cost']
-                };
-    }
+let bingSu = JSON.parse(json)
 
-}
 //빙수정보
 const mainIceInfo = new Discord.MessageEmbed() //인절미설빙
 	.setColor('#ddbea9')
