@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var requestURL = 'https://github.com/snow35/sulbing/blob/master/menu.json';
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var request = new XMLHttpRequest();
-request.open('GET', "https://github.com/snow35/sulbing/blob/master/menu.json");
+request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
