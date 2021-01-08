@@ -142,7 +142,7 @@ client.on('message', message => {
 
 	//메뉴판호출
 	else if ( message.content === '!빙수메뉴판' || message.content === '!메뉴판') {
-		message.channel.send(Icelist['bingSu'][1]['name']);
+		message.channel.send(Icelist);
 	}
 
 	//멘션 테스트
