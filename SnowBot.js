@@ -169,6 +169,9 @@ client.on('message', message => {
 		message.channel.send("루님화이티이잉!")
 	}
 	
+	else if (message.content === '!test') {
+		message.channel.send(dict)
+	}
 });
 
 
