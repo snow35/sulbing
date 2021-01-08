@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var requestURL = 'https://github.com/snow35/sulbing/blob/master/menu.json';
+var requestURL = 'menu.json';
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var request = new XMLHttpRequest();
 var dict = {};
@@ -17,8 +17,6 @@ request.onload = function() {
 			dict[i]['value'] = menuboard["bingSu"][i]['cost'];
 		}
 }
-
-console.log(menuboard);
 //빙수정보
 const mainIceInfo = new Discord.MessageEmbed() //인절미설빙
 	.setColor('#ddbea9')
