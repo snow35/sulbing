@@ -10,8 +10,6 @@ request.send();
 
 request.onload = function() {
 		var menuboard = request.response; //<-- 여기 있는디 왜징 menuboard is not defined 라고 나와서..
-		populateHeader(menuboard);
-		showHeroes(menuboard);
 
 		for (let i = 0; i < 11; i++) {
 			dict[i]['name'] = menuboard['bingSu'][i]['name'];
