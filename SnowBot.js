@@ -17,6 +17,7 @@ request.onload = function() {
 		}
 }
 
+console.log(menuboard);
 //빙수정보
 const mainIceInfo = new Discord.MessageEmbed() //인절미설빙
 	.setColor('#ddbea9')
