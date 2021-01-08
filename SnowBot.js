@@ -103,27 +103,27 @@ client.on('message', message => {
 	}
 
 	//비수정보호출
-	else if (message.content === '!빙수 인절미설빙') {
+	else if (message.content === '!빙수 인절미설빙' || message.content === '!빙수정보 인절미설빙') {
 		message.channel.send(mainIceInfo);
 	}
 
-	else if (message.content === '!빙수 와르르생딸기설빙') {
+	else if (message.content === '!빙수 와르르생딸기설빙' || message.content === '!빙수정보 와르르생딸기설빙') {
 		message.channel.send(WarrStrawSulbingInfo);
 	}
 
-	else if (message.content === '!빙수 오레오초코몬스터설빙' || message.content === '!빙수정보 오래오초코몬스터설빙' || message.content === '!빙수정보 오래오설빙' || message.content === '!빙수정보 오레오설빙' || message.content === '!빙수정보 오레오초코몬스터설빙(오레오설빙)') {
+	else if (message.content === '!빙수 오레오초코몬스터설빙' || message.content === '!빙수정보 오레오초코몬스터설빙') {
 		message.channel.send(OreaoIceInfo);
 	}
 
-	else if (message.content === '!빙수 민트초코설빙' || message.content === '!빙수정보 외계음식') {
+	else if (message.content === '!빙수정보 민트초코설빙' || message.content === '!빙수 민트초코설빙') {
 		message.channel.send(NotToEatInfo);
 	}
 
-	else if (message.content === '!빙수 티라미수설빙') {
+	else if (message.content === '!빙수 티라미수설빙' || message.content === '!빙수정보 티라미수설빙') {
 		message.channel.send(TiramisuInfo);
 	}
 
-	else if (message.content === '!빙수 애플망고치즈설빙') {
+	else if (message.content === '!빙수 애플망고치즈설빙' || message.content === '!빙수정보 애플망고치즈설빙') {
 		message.channel.send(applemangoInfo);
 	}
 
@@ -145,7 +145,7 @@ client.on('message', message => {
 	else if (message.content.slice(0,3) === '!주문') {
 		message.channel.send("<@"+message.author+">님")
 		message.channel.send(message.content.slice(4,)+" 주문되었습니다")
-		message.channel.send("소요시간은 약10~15분 입니다")
+		message.channel.send("소요시간은 약3~5분 입니다")
 	}	
 
 });
