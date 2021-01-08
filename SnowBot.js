@@ -18,7 +18,7 @@ request.onload = function() {
                 };
     }
 
-
+}
 //빙수정보
 const mainIceInfo = new Discord.MessageEmbed() //인절미설빙
 	.setColor('#ddbea9')
@@ -103,7 +103,7 @@ const Icelist = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('등록된 빙수 종류입니다(추가중입니당)')
 	.addFields(dict[2]); 
-}
+
 //테스트 코드
 client.on('ready', () => {
     console.log('ready!');
