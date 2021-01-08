@@ -144,7 +144,7 @@ client.on('message', message => {
 
 	else if (message.content.slice(0,3) === '!주문') {
 		message.channel.send("<@"+message.author+">님")
-		message.channel.send(message.content.slice(5,)+" 주문되었습니다")
+		message.channel.send(message.content.slice(4,)+" 주문되었습니다")
 		message.channel.send("소요시간은 약10~15분 입니다")
 	}	
 
