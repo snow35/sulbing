@@ -89,11 +89,11 @@ const Icelist = new Discord.MessageEmbed()
 		{
 			title : "빙수이름 : 가격(원)",
 			bingSu : [ {name : "인절미설밍", cost : "7,900원"},
-							  {name : "오레오초코몬스터설빙(오레오설빙)", cost : "11,900원"},
-							  {name : "와르르생딸기설빙(기간한정!)", cost : "11,500원"},
-							  {name : "민트초코설빙", cost : "10,900원"},
-							  {name : "티라미수설빙 ", cost : "10,900원"},
-							  {name : "애플망고치즈설빙 ", cost : "11,900원"}]
+				{name : "오레오초코몬스터설빙(오레오설빙)", cost : "11,900원"},
+				{name : "와르르생딸기설빙(기간한정!)", cost : "11,500원"},
+				{name : "민트초코설빙", cost : "10,900원"},
+				{name : "티라미수설빙 ", cost : "10,900원"},
+				{name : "애플망고치즈설빙 ", cost : "11,900원"}]
 		 }
 	);
 
@@ -142,7 +142,7 @@ client.on('message', message => {
 
 	//메뉴판호출
 	else if ( message.content === '!빙수메뉴판' || message.content === '!메뉴판') {
-		message.channel.send(Icelist);
+		message.channel.send(Icelist['bingSu'][1]['name']);
 	}
 
 	//멘션 테스트
@@ -156,6 +156,8 @@ client.on('message', message => {
 		message.channel.send("소요시간은 약3~5분 입니다")
 	}	
 
+
+	
 });
 
 
