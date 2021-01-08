@@ -104,6 +104,8 @@ const Icelist = new Discord.MessageEmbed()
 	.setTitle('등록된 빙수 종류입니다(추가중입니당)')
 	.addFields(dict); 
 
+console.log(dict);
+
 //테스트 코드
 client.on('ready', () => {
     console.log('ready!');
