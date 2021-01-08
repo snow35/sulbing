@@ -18,8 +18,8 @@
     "url": "https://github.com/snow35/sulbing/issues"
   },
   "homepage": "https://github.com/snow35/sulbing#readme",
-  
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "xmlhttprequest": "^1.8.0"
   }
 }
