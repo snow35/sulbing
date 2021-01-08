@@ -102,7 +102,7 @@ const BotcommandHelp = new Discord.MessageEmbed()
 const Icelist = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('등록된 빙수 종류입니다(추가중입니당)')
-	.addFields(dict); 
+	.addFields(dict[2]); 
 
 //테스트 코드
 client.on('ready', () => {
