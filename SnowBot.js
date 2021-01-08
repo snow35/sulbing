@@ -3,21 +3,21 @@ const client = new Discord.Client();
 var requestURL = 'https://github.com/snow35/sulbing/blob/master/menu.json';
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var request = new XMLHttpRequest();
+var dict = {};
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-		var menuboard = request.response;
+		var menuboard = request.response; //<-- 여기 있는디 왜징 menuboard is not defined 라고 나와서..
 		populateHeader(menuboard);
 		showHeroes(menuboard);
-}
 
-var dict = {};
-for (let i = 0; i < 11; i++) {
-	dict[i]['name'] = menuboard['bingSu'][i]['name'];
-	dict[i]['value'] = menuboard['bingSu'][i]['cost'];
-}//된건가오? 저거 name하구 cost에 '' 넣어야 되낭
+		for (let i = 0; i < 11; i++) {
+			dict[i]['name'] = menuboard['bingSu'][i]['name'];
+			dict[i]['value'] = menuboard['bingSu'][i]['cost'];
+		}
+}
 
 //빙수정보
 const mainIceInfo = new Discord.MessageEmbed() //인절미설빙
