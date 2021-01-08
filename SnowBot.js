@@ -139,7 +139,7 @@ client.on('message', message => {
 
 	//멘션 테스트
 	else if (message.content === '!호출') {
-		message.channel.send(message.author+"님")
+		message.channel.send("<@"+message.author+">님")
 	}
 
 	else if (message.content === '!빙수주문 민트초코설빙') {
