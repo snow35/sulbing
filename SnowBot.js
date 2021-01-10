@@ -12,7 +12,7 @@ const BotcommandHelp = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle('인절미빙수 봇 명령어입니다')
 	.addFields(
-		{ name: ':shaved_ice:!빙수정보 (빙수이름)', value: '원하는 빙수의 정보를 알려줘요\n!빙수 로도 호출가능해요'},
+		{ name: ':shaved_ice:!빙수 (빙수이름)', value: '원하는 빙수의 정보를 알려줘요!'},
 		{ name: ':clipboard:!빙수메뉴판', value: '현재 등록된 빙수를 보여줘요\n!메뉴판 으로도 호출가능해요'},
 		{ name: ':man_raising_hand:!주문 (빙수이름)', value: '원하는 빙수를 주문할수 있어요!'}
 	);
