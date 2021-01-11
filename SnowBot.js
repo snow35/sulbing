@@ -31,10 +31,10 @@ client.on('message', message => {
 	}
 
 	else if (message.content.startsWith("!빙수 ")) {
-		let args = message.content.split(" ");
+		let command = message.content.split(" ")[0];
 		let menu = getBingsuMenu();
 		menu.forEach(item => {
-			if (args[1] == item.name) {
+			if (message.content.replace(command, "").trim() == item.name) {
 				let bingSuInfoEmbed = new Discord.MessageEmbed()
 					.setColor('#ddbea9')
 					.setTitle(item.name)
