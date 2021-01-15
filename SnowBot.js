@@ -80,7 +80,7 @@ client.on('message', message => {
 		message.channel.send("루님화이티이잉!")
 	}
 	else if (message.content.slice(0,3) === '!DM') {
-        privateMessage(client, '!DM', 'Hello!')
+        privateMessage(client, 'Hello!')
     }
 });
 client.login(process.env.TOKEN);
