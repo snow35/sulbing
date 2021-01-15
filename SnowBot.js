@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const client = new Discord.Client();
+const privateMessage = require('./private-message')
 
 var onedaysold = 0; // 하루판매량 변수선언 -> node-schedule 사용해서 하루에 한 번씩 변수 초기화 by 페넥님 (암튼 이거두 수정하면 됨)
 
@@ -93,6 +94,7 @@ client.on('message', message => {
 	else if (message.content === '!루님화이팅') {
 		message.channel.send("루님화이티이잉!")
 	}
+	privateMessage(client, 'Send_DM', 'hello!')
 });
 
 client.login(process.env.TOKEN);
