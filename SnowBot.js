@@ -79,6 +79,8 @@ client.on('message', message => {
 	else if (message.content === '!루님화이팅') {
 		message.channel.send("루님화이티이잉!")
 	}
-	
+	else if (message.content.slice(0,3) === '!DM') {
+        privateMessage(client, 'Hello!')
+    }
 });
 client.login(process.env.TOKEN);
