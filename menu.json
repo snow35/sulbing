@@ -15,7 +15,7 @@
             "allergy": ["우유", "대두"]
         },
         {
-            "name": "오레오초코몬스터 설빙",
+            "name": ["오레오초코몬스터 설빙", "오레오설빙", "오래오초코몬스터설빙", "오래오설빙"],
             "img": "https://sulbing.com/data/file/menu/3554379581_DaH8eCuk_950e669d08fad48effd95f4b14f9df8d32d316aa.png",
             "description": "화려한 비쥬얼로 압도하는 역대급 몬스터 크기! 맛도 모양도 몬스터!",
             "cost": 11900,
@@ -29,7 +29,7 @@
             "allergy": ["우유", "대두", "밀"]
         },
         {
-            "name": "와르르생딸기설빙",
+            "name": ["와르르생딸기설빙","생딸기설빙"], 
             "img": "https://sulbing.com/data/file/menu/1794566202_LTytbv3e_ea85ea93a5fdae61fd83d03a5c29df478342cb3f.png",
             "description": "하얀 우유얼음안에 생딸기가 한가득 들어간 제품",
             "cost": 11500,
@@ -71,7 +71,7 @@
             "allergy": ["우유", "대두", "계란", "밀", "쇠고기"]
         },
         {
-            "name": "애플망고치즈설빙",
+            "name": ["애플망고치즈설빙", "망고설빙"],
             "img": "https://sulbing.com/data/file/menu/3554379581_tB1EubwI_9105efcd2210cd8913700485697f216a72710c31.png",
             "description": "남녀노소 모두 좋아하는 망고의 최상급 품질인 애플망고의 달콤함과 깊고 진한 치즈 케이크가 만나 신선하고 상큼한 애플망고의 풍미를 온전히 느낄 수 있는 제품 ",
             "cost": 11900,
@@ -81,6 +81,34 @@
                 "protein": 19,
                 "saturatedFat": 19,
                 "sodium": 350
+            },
+            "allergy": ["우유", "대두", "계란", "밀"]
+        },
+        {
+            "name": "스윗캔디구슬설빙",
+            "img": "",
+            "description": "핑크빛 달콤 머랭쿠키와 몽글몽글 솜사탕 맛 빙수",
+            "cost": "몰라 공홈에 없어",
+            "nutrition" :{
+                "calories": 930,
+                "sugars": 16,
+                "protein": 3,
+                "saturatedFat": 23,
+                "sodium": 390
+            },
+            "allergy": ["우유", "대두", "계란", "밀"]
+        },
+        {
+            "name": "치즈설빙",
+            "img": "",
+            "description": "치즈케익에 입안 가득 퍼지는 치즈 가루가 더해져 깊고 진한 치즈 맛을 느낄 수 있죠, 여기에 부드러운 아이스크림과 고소한 아몬드까지 어우러져 정말 특별한 제품!",
+            "cost": "몰라 공홈에 없어",
+            "nutrition" :{
+                "calories": 930,
+                "sugars": 16,
+                "protein": 3,
+                "saturatedFat": 23,
+                "sodium": 390
             },
             "allergy": ["우유", "대두", "계란", "밀"]
         }
