@@ -5,6 +5,8 @@ function getBingsuMenu() {
 	let data = fs.readFileSync("./menu.json");
 	return JSON.parse(data).bingSu;
 }
+const privateMessage = require('./private-message')
+
 //명령어 설명
 const BotcommandHelp = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
@@ -77,5 +79,6 @@ client.on('message', message => {
 	else if (message.content === '!루님화이팅') {
 		message.channel.send("루님화이티이잉!")
 	}
+	privateMessage(client, '!DM', 'Hello!')
 });
 client.login(process.env.TOKEN);
