@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const client = new Discord.Client();
-const privateMessage = require('./private-message')
 
 var onedaysold = 0; // 하루판매량 변수선언 -> node-schedule 사용해서 하루에 한 번씩 변수 초기화 by 페넥님 (암튼 이거두 수정하면 됨)
 
@@ -35,26 +34,23 @@ client.on('message', message => {
 
 	else if (message.content.startsWith("!빙수 ")) {
 		let args = message.content.split(" ");
-		let command = message.content.split("")[0];
 		let menu = getBingsuMenu();
 		menu.forEach(item => {
 			if (args[1] == item.name) {
-				if (message.content.replace(command, "").trim() == item.name) {
-					let bingSuInfoEmbed = new Discord.MessageEmbed()
-						.setColor('#ddbea9')
-						.setTitle(item.name)
-						.setThumbnail(item.img)
-						.setDescription(item.description)
-						.addField("제품명", item.name, true)
-						.addField("가격", item.cost + "원", true)
-						.addField("영양성분", "열량(Kcal): " + item.nutrition.calories + "\n" +
+				let bingSuInfoEmbed = new Discord.MessageEmbed()
+					.setColor('#ddbea9')
+					.setTitle(item.name)
+					.setThumbnail(item.img)
+					.setDescription(item.description)
+					.addField("제품명", item.name, true)
+					.addField("가격", item.cost + "원", true)
+					.addField("영양성분", "열량(Kcal): " + item.nutrition.calories + "\n" +
 						"당류(g): " + item.nutrition.sugars + "\n" +
 						"단백질(g): " + item.nutrition.protein + "\n" +
 						"포화지방(g): " + item.nutrition.saturatedFat + "\n" +
 						"나트륨(mg): " + item.nutrition.sodium)
-						.addField("알레르기", item.allergy.join(", "));
-					message.channel.send(bingSuInfoEmbed);
-				}
+					.addField("알레르기", item.allergy.join(", "));
+				message.channel.send(bingSuInfoEmbed);
 			}
 		});
 	}
@@ -97,7 +93,6 @@ client.on('message', message => {
 	else if (message.content === '!루님화이팅') {
 		message.channel.send("루님화이티이잉!")
 	}
-	 privateMessage(client, 'send_DM', 'Hello!')
 });
 
 client.login(process.env.TOKEN);
