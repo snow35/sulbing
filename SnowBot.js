@@ -133,10 +133,47 @@ client.on('message', message => {
 		message.channel.send("플레이어 이름을 입력해주세요 !player (@플레이어1),(@플레이어2)")
 	}
 
-	else if(message.content.startsWith("!player")){
-		let player = message.mentions.users;
-		message.channel.send(player.username)
-		console.log(player.username)
+	else if(message.content.startsWith("!player")) {
+		// 여깄는 주석은 나중에 지워주세요.
+
+
+		/** 
+		 * 먼저 모든 멘션을 가져와요(message.mentions). 타입은 MessageMentions에요.
+		 * 그 다음 모든 유저 멘션을 가져와요(MessageMentions.users).
+		 * 모든 유저 멘션을 가져오면 타입은 키가 유저의 ID(Snowflake), 값이 유저(User)인 컬렉션이 돼요(Collection<Snowflake, User>).
+		 * 그게 아래 있는 players에요.
+		*/
+		let players = message.mentions.users;
+
+		/**
+		 * players는 바로 유저를 가져올 수 없어요. 키-값 쌍이 모인 컬렉션이기 때문이에요.
+		 * 우리가 원하는건 유저네임과 유저 ID에요. (유저 ID는 키에서 받는게 아닌 값에서 받을거에요.)
+		 * 그러면 먼저 위에 players에서 값을 따로 빼내야해요. Collection.array()를 하면 값 배열이 따로 만들어져요.
+		 */
+		let playersArray = players.array();
+
+		// 일단 무조건 2명을 받는다고 가정해요.
+
+		let firstPlayerUsername;
+		let firstPlayerUserId;
+		let secondPlayerUsername;
+		let secondPlayerUserId;
+		// 여기서는 각각 변수를 나눴지만, 키-값 쌍으로 이루어진 Map 같은걸 쓰시는게 더 좋아요.
+
+		/**
+		 * playersArray의 첫번째 요소를 1P, 두번째 요소를 2P로 둘게요.
+		 * 유저네임과 ID에 playersArray의 각 요소의 유저네임과 ID를 넣어줄게요.
+		 */
+		if (playersArray.length == 2) {
+			firstPlayerUsername = playersArray[0].username;
+			firstPlayerUserId = playersArray[0].id;
+			secondPlayerUsername = playersArray[1].username;
+			secondPlayerUserId = playersArray[1].id;
+		}
+
+		// 그럼 멘션에서 유저네임과 유저 ID를 가져왔어요. 콘솔에 로그를 남겨볼게요.
+		console.log("1P: " + firstPlayerUsername + " / " + firstPlayerUserId);
+		console.log("2P: " + secondPlayerUsername + " / " + secondPlayerUserId);
 	}
 
 });
