@@ -136,8 +136,8 @@
             "allergy": ["우유", "대두"]
         },
         {
-            "name": "생딸기설빙",
-            "subname": ["생딸기설빙", "딸기설빙"],
+            "name": "딸기설빙",
+            "subname": "딸기설빙",
             "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=1988351642_AXh3VTcq_d8f37c2d098d2f0b62ae0a98cabe04e7824a937b.png",
             "description": "생딸기의 상큼함과 자연의 맛을 조화롭게 담아 고객의 입맛을 사로잡은 생딸기 시리즈 원조제품",
             "cost": "404error",
