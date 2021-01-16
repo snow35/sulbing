@@ -22,7 +22,7 @@ client.on('ready', () => {
 });
 
 //문제해결코드?
-Client.on("message", message => {
+client.on("message", message => {
     if (message.author.bot) return;
 });
 
