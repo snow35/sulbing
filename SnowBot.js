@@ -27,7 +27,7 @@ client.on('message', message => {
 
 	if (message.author.bot) return; //보낸사람 = 봇 일때
 	else if (client.user.id == message.author.id) return; //보낸사람 자신일때 
-	
+
 	//테스트 호출
 	else if (message.content === '!ping') {
 		message.channel.send('Pong');
@@ -85,6 +85,11 @@ client.on('message', message => {
 	else if (message.content === '!DM') {
 		message.author.send("hello!")
 	}
-	
+
+	//하이카드 게임기는 추가
+	else if(message.content === '!HIGHCARD'){
+		message.channel.send(":black_joker:HIGHCARD에 오신것을 환영합니다")
+	}
+
 });
 client.login(process.env.TOKEN);
