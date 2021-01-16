@@ -134,10 +134,10 @@ client.on('message', message => {
 	else if(message.content === '!Play HIGHCARD'){
 		var Player_one_name = '';
 		var player_two_name = '';
-		var Player_one_card = Math.floor( jbRandom * 14 + 1);
-		var Player_two_card = Math.floor( jbRandom * 14 + 1);
-		var Player_one_card_shape = Math.floor( jbRandom * 4 + 1);
-		var Player_two_card_shape = Math.floor( jbRandom * 4 + 1);
+		var Player_one_card = Math.floor(Math.random * 14) + 1;
+		var Player_two_card = Math.floor(Math.random * 14) + 1;
+		var Player_one_card_shape = Math.floor(Math.random * 4) + 1;
+		var Player_two_card_shape = Math.floor(Math.random * 4) + 1;
 		message.channel.send("플레이어 이름을 입력해주세요 !player (@플레이어1),(@플레이어2)")
 	}
 
