@@ -171,9 +171,8 @@ client.on('message', message => {
 		message.channel.send("Player1 : "+name1)
 		//message.channel.send("Player2 : "+name2)
 		//console.log(name)
-
 		client.users.fetch(user1_id).then((user)=>{
-			user.send("Player2's card is"+card_shape.Player_two_card_shape+card_dict.Player_two_card)
+			user.send("Player2's card is"+card_shape[Player_two_card_shape]+card_dict[Player_two_card])
 		});
 	}
 
