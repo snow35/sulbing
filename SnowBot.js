@@ -124,15 +124,17 @@ client.on('message', message => {
 	}
 
 	else if(message.content === '!Play HIGHCARD'){
+		message.channel.send("플레이어 이름을 입력해주세요 !player (@플레이어1),(@플레이어2)")
+	}
+
+	else if(message.content.startsWith("!player")){
 		var Player_one_card = Math.floor(Math.random() * 14) + 1;
 		var Player_two_card = Math.floor(Math.random() * 14) + 1;
 		var Player_one_card_shape = Math.floor(Math.random() * 4) + 1;
 		var Player_two_card_shape = Math.floor(Math.random() * 4) + 1;
-		message.channel.send("플레이어 이름을 입력해주세요 !player (@플레이어1),(@플레이어2)")
 		console.log(Player_one_card);
-	}
+		console.log(Player_two_card);
 
-	else if(message.content.startsWith("!player")){
 		var user1 = message.mentions.users.first();
 		var user1_id = message.mentions.users.first().id;
 		var name1 = user1.username;
