@@ -20,14 +20,17 @@ const BotcommandHelp = new Discord.MessageEmbed()
 client.on('ready', () => {
     console.log('ready!');
 });
+
+//문제해결코드?
+Client.on("message", message => {
+    if (message.author.bot) return;
+});
+
 //입력값 확인, 실행
 client.on('message', message => {
 	console.log(message.content);
 
-	/*client.users.fetch('516590788382162945').then((user) => {
-		user.send('hello world!')
-	})*/
-
+	privateMessage(client, "DM", "hello!")
 	//테스트 호출
 	if (message.content === '!ping') {
 		message.channel.send('Pong');
