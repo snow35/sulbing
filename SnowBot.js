@@ -137,7 +137,7 @@ client.on('message', message => {
 		var user1 = message.mentions.users.first();
 		var user1_id = message.mentions.users.first().id;
 		var name1 = user1.username;
-		var user2 = message.mentions.users.second();
+		//var user2 = message.mentions.users.second();
 		var name2 = user2.username;
 		//let player = message.mentions;
 		message.channel.send("Player1 : "+name1)
