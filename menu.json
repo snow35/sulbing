@@ -32,7 +32,7 @@
         },
         {
             "name": "와르르생딸기설빙",
-            "subname": ["와르르생딸기설빙","생딸기설빙"], 
+            "subname": "와르르생딸기설빙", 
             "img": "https://sulbing.com/data/file/menu/1794566202_LTytbv3e_ea85ea93a5fdae61fd83d03a5c29df478342cb3f.png",
             "description": "하얀 우유얼음안에 생딸기가 한가득 들어간 제품",
             "cost": 11500,
