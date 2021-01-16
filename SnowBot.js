@@ -135,7 +135,7 @@ client.on('message', message => {
 
 	else if(message.content.startsWith("!player")){
 		var user1 = message.mentions.users.first();
-		var name1 = user2.username;
+		var name1 = user1.username;
 		var user2 = message.mentions.users.second();
 		var name2 = user2.username;
 		//let player = message.mentions;
