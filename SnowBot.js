@@ -19,7 +19,7 @@ const BotcommandHelp = new Discord.MessageEmbed()
 //HIGHCARD
 const HighGeneralHelp = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
-	.setTitle(':black_joker:**HIGHCARD에 오신것을 환영합니다**')
+	.setTitle(':black_joker: **HIGHCARD에 오신것을 환영합니다**')
 	.addFields(
 		{ name: ':page_facing_up:!Help', value: 'HGIHCARD기본 사용법입니다'},
 		{ name: ':books:!Rules', value: 'HIGHCARD게임 룰을 설명해줘요'},
@@ -37,9 +37,9 @@ const HighCardRules = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
 	.setTitle(':black_joker:**HIGHCARD규칙입니다')
 	.addFields(
-		{ name: ':one:양측 플레이어는 카드를 한장씩 뽑게 됩니다', value: '자신의 카드는 볼 수 없으며 상대방의 카드만 볼 수 있습니다\n상대방의 카드는 DM으로 전송됩니다'},
-		{ name: ':two:자신의 차례에 자신의 카드가 상대방의 카드보다 더 크다고 생각하시면 코인을 배팅합니다', value:'!(숫자) 처음 제시할때 사용합니다\n!call: 상대방이 지불한 양과 같은 양의 코인을 지불합니다\n!double:상대방이 지불한 양의 두배를 지불합니다.\n!gg:자신이 질것 같다고 생각되는경우 게임을 종료하고 상대방이 승리합니다'},
-		{ name: ':three:각각 3번의 배팅후에 결과가 공개되며 더 큰 숫자를 가진 사람이 배팅한 코인을 전부 가져갑니다', value:'​'},
+		{ name: ':one: 양측 플레이어는 카드를 한장씩 뽑게 됩니다', value: '자신의 카드는 볼 수 없으며 상대방의 카드만 볼 수 있습니다\n상대방의 카드는 DM으로 전송됩니다'},
+		{ name: ':two: 자신의 차례에 자신의 카드가 상대방의 카드보다 더 크다고 생각하시면 코인을 배팅합니다', value:'!(숫자) 처음 제시할때 사용합니다\n!call: 상대방이 지불한 양과 같은 양의 코인을 지불합니다\n!double:상대방이 지불한 양의 두배를 지불합니다.\n!gg:자신이 질것 같다고 생각되는경우 게임을 종료하고 상대방이 승리합니다'},
+		{ name: ':three: 각각 3번의 배팅후에 결과가 공개되며 더 큰 숫자를 가진 사람이 배팅한 코인을 전부 가져갑니다', value:'​'},
 		{ name: '카드의 족보는 다음과 같습니다', value: ':two:<:three:<:four:<:five:<:six:<:seven:<:eight:<:nine:<:keycap_ten:<:regional_indicator_j:<:regional_indicator_q:<:regional_indicator_k:<:regional_indicator_a:'}
 	);
 
