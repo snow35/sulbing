@@ -95,7 +95,7 @@
             "subname": "스윗캔디구슬설빙",
             "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=1988351642_zSil3KGe_81dd9a0d39cadf1c5b58ef935474e443504af4f3.png",
             "description": "핑크빛 달콤 머랭쿠키와 몽글몽글 솜사탕 맛 빙수",
-            "cost": "몰라 공홈에 없어",
+            "cost": "190,030,000",
             "nutrition" :{
                 "calories": 930,
                 "sugars": 16,
@@ -110,7 +110,7 @@
             "subname": "치즈설빙",
             "img": "https://sulbing.com/bbs/board.php?bo_table=menu&wr_id=23",
             "description": "치즈케익에 입안 가득 퍼지는 치즈 가루가 더해져 깊고 진한 치즈 맛을 느낄 수 있죠, 여기에 부드러운 아이스크림과 고소한 아몬드까지 어우러져 정말 특별한 제품!",
-            "cost": "10900원",
+            "cost": 10900,
             "nutrition" :{
                 "calories": 930,
                 "sugars": 16,
@@ -119,6 +119,51 @@
                 "sodium": 390
             },
             "allergy": ["우유", "대두", "계란", "밀"]
+        },
+        {
+            "name": "팥인절미설빙",
+            "subname": "팥인절미설빙",
+            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=3554379581_GyKwkLXO_5231651cc619fb7027550bc2a4fd4a0902f1cd01.png",
+            "description": "전통의 맛을 살린 설빙. 달콤한 팥이 기본으로 들어가고 그 위에 고소한 콩고물과 쫄깃한 인절미 떡이 한가득 들어있는 인기만점 빙수!",
+            "cost": "404error",
+            "nutrition" :{
+                "calories": 710,
+                "sugars": 76,
+                "protein": 26,
+                "saturatedFat": 14,
+                "sodium": 330
+            },
+            "allergy": ["우유", "대두"]
+        },
+        {
+            "name": "생딸기설빙",
+            "subname": ["생딸기설빙", "딸기설빙"],
+            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=1988351642_AXh3VTcq_d8f37c2d098d2f0b62ae0a98cabe04e7824a937b.png",
+            "description": "생딸기의 상큼함과 자연의 맛을 조화롭게 담아 고객의 입맛을 사로잡은 생딸기 시리즈 원조제품",
+            "cost": "404error",
+            "nutrition" :{
+                "calories": 780,
+                "sugars":93,
+                "protein": 17,
+                "saturatedFat": 11,
+                "sodium": 440
+            },
+            "allergy": ["우유", "대두", "밀"]
+        },
+        {
+            "name": "초코브라우니설빙",
+            "subname": ["초코브라우니설빙", "브라우니설빙"],
+            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=3554379581_hslKF8M7_d1146e492a298dfdb6fafb3bc3da0b8a9b73b1d8.png",
+            "description": "바삭한 초코쿠키와 쫀득한 브라우니가 달콤한 초코 소스와 만나 남녀노소 부담 없이 즐길 수 있는 제품",
+            "cost": 10900,
+            "nutrition" :{
+                "calories": 1160,
+                "sugars":64,
+                "protein": 21,
+                "saturatedFat": 26,
+                "sodium": 500
+            },
+            "allergy": ["우유", "대두", "계란","밀"]
         }
     ]
 }
