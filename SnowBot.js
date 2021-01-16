@@ -7,6 +7,13 @@ function getBingsuMenu() {
 }
 //const privateMessage = require('./private-message')
 
+var Player_one_name = '';
+var player_two_name = '';
+var Player_one_card = Math.floor( jbRandom * 14 + 1);
+var Player_two_card = Math.floor( jbRandom * 14 + 1);
+var Player_one_card_shape = Math.floor( jbRandom * 4 + 1);
+var Player_two_card_shape = Math.floor( jbRandom * 4 + 1);
+
 //명령어 설명
 const BotcommandHelp = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
@@ -122,6 +129,21 @@ client.on('message', message => {
 	}
 	else if(message.content === '!Rules'){
 		message.channel.send(HighCardRules)
+	}
+
+	else if(message.content === '!Play HIGHCARD'){
+		var Player_one_name = '';
+		var player_two_name = '';
+		var Player_one_card = Math.floor( jbRandom * 14 + 1);
+		var Player_two_card = Math.floor( jbRandom * 14 + 1);
+		var Player_one_card_shape = Math.floor( jbRandom * 4 + 1);
+		var Player_two_card_shape = Math.floor( jbRandom * 4 + 1);
+		message.channel.send("플레이어 이름을 입력해주세요 !player (@플레이어1),(@플레이어2)")
+	}
+
+	else if(message.content.startsWith("!player")){
+		let player = message.mentions.users;
+		message.channel.send(player)
 	}
 
 });
