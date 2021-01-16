@@ -30,7 +30,7 @@ client.on("message", message => {
 client.on('message', message => {
 	console.log(message.content);
 
-	privateMessage(client, "DM", "hello!")
+
 	//테스트 호출
 	if (message.content === '!ping') {
 		message.channel.send('Pong');
