@@ -21,23 +21,15 @@ client.on('ready', () => {
     console.log('ready!');
 });
 
-//보낸사람 = 봇일떄
-client.on("message", message => {
-    if (message.author.bot) return;
-});
-
-//보낸사람 = 자기자신 일때
-client.on("message", message => {
-    if (client.user.id == message.author.id) return;
-});
-
 //입력값 확인, 실행
 client.on('message', message => {
 	console.log(message.content);
 
-
+	if (message.author.bot) return; //보낸사람 = 봇 일때
+	else if (client.user.id == message.author.id) return; //보낸사람 자신일때 
+	
 	//테스트 호출
-	if (message.content === '!ping') {
+	else if (message.content === '!ping') {
 		message.channel.send('Pong');
 	}
 
