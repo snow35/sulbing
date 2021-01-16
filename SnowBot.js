@@ -134,10 +134,13 @@ client.on('message', message => {
 	}
 
 	else if(message.content.startsWith("!player")){
-		const user = message.mentions.users.first();
-		const name = user.username;
+		var user1 = message.mentions.users.first();
+		var name1 = user2.username;
+		var user2 = message.mentions.users.second();
+		var name2 = user2.username;
 		//let player = message.mentions;
-		message.channel.send(name)
+		message.channel.send("Player1 : "+name1)
+		message.channel.send("Player2 : "+name2)
 		console.log(name)
 	}
 
