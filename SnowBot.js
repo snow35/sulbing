@@ -144,7 +144,7 @@ client.on('message', message => {
 		//console.log(name)
 
 		client.users.fetch(user1_id).then((user)=>{
-			user.send("Player2's card number is"+Player_one_card)
+			user.send("Player2's card number is"+Player_two_card)
 		});
 	}
 
