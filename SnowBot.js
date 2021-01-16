@@ -142,7 +142,7 @@ client.on('message', message => {
 		//let player = message.mentions;
 		message.channel.send("Player1 : "+name1)
 		//message.channel.send("Player2 : "+name2)
-		console.log(name)
+		//console.log(name)
 
 		client.users.fetch(user1_id).then((user)=>{
 			user.send("Player2's card number is"+Player_one_card)
