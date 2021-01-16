@@ -135,6 +135,7 @@ client.on('message', message => {
 
 	else if(message.content.startsWith("!player")){
 		var user1 = message.mentions.users.first();
+		var user1_id = message.mentions.users.first().id;
 		var name1 = user1.username;
 		var user2 = message.mentions.users.second();
 		var name2 = user2.username;
@@ -142,6 +143,10 @@ client.on('message', message => {
 		message.channel.send("Player1 : "+name1)
 		message.channel.send("Player2 : "+name2)
 		console.log(name)
+
+		client.users.fetch(user1_id).then((user)=>{
+			user.send("Player2's card number is"+Player_one_card)
+		});
 	}
 
 });
