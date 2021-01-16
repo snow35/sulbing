@@ -135,6 +135,10 @@ client.on('message', message => {
 		console.log(Player_one_card);
 		console.log(Player_two_card);
 
+		var Player = message.mentions.users;
+		var PlayerName = users.username;
+		console.log(PlayerName);
+
 		var user1 = message.mentions.users.first();
 		var user1_id = message.mentions.users.first().id;
 		var name1 = user1.username;
