@@ -136,7 +136,7 @@ client.on('message', message => {
 	else if(message.content.startsWith("!player")){
 		let player = message.mentions.users;
 		message.channel.send(player.username)
-		console.log(player)
+		console.log(message.mentions.user.username)
 	}
 
 });
