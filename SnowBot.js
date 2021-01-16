@@ -35,7 +35,7 @@ const HighCardHelp = new Discord.MessageEmbed()
 
 const HighCardRules = new Discord.MessageEmbed()
 	.setColor('#ddbea9')
-	.setTitle(':black_joker:**HIGHCARD규칙입니다')
+	.setTitle(':black_joker:HIGHCARD규칙입니다')
 	.addFields(
 		{ name: ':one: 양측 플레이어는 카드를 한장씩 뽑게 됩니다', value: '자신의 카드는 볼 수 없으며 상대방의 카드만 볼 수 있습니다\n상대방의 카드는 DM으로 전송됩니다'},
 		{ name: ':two: 자신의 차례에 자신의 카드가 상대방의 카드보다 더 크다고 생각하시면 코인을 배팅합니다', value:'!(숫자) 처음 제시할때 사용합니다\n!call: 상대방이 지불한 양과 같은 양의 코인을 지불합니다\n!double:상대방이 지불한 양의 두배를 지불합니다.\n!gg:자신이 질것 같다고 생각되는경우 게임을 종료하고 상대방이 승리합니다'},
