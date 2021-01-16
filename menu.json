@@ -2,6 +2,7 @@
     "bingSu": [
         {
             "name": "인절미설빙",
+            "subname": "인절미설빙",
             "img": "https://sulbing.com/data/file/menu/3554379581_2DtiwnUd_d9b947a994569922c45479d14103b93c3abcbb46.png",
             "description": "설빙의 베스트셀러 메뉴. 기존 팥빙수의 틀에서 벗어나 팥이 들어가지 않고, 고소한 콩고물과 쫄깃한 인절미 떡으로 맛을 내어 남녀노소 모두에게 인기 있는 메뉴!",
             "cost": 8900,
@@ -14,8 +15,9 @@
             },
             "allergy": ["우유", "대두"]
         },
-        {
-            "name": ["오레오초코몬스터 설빙", "오레오설빙", "오래오초코몬스터설빙", "오래오설빙"],
+        {   
+            "name": "오레오초코몬스터설빙",
+            "subname": ["오레오초코몬스터 설빙", "오레오설빙", "오래오초코몬스터설빙", "오래오설빙"],
             "img": "https://sulbing.com/data/file/menu/3554379581_DaH8eCuk_950e669d08fad48effd95f4b14f9df8d32d316aa.png",
             "description": "화려한 비쥬얼로 압도하는 역대급 몬스터 크기! 맛도 모양도 몬스터!",
             "cost": 11900,
@@ -29,7 +31,8 @@
             "allergy": ["우유", "대두", "밀"]
         },
         {
-            "name": ["와르르생딸기설빙","생딸기설빙"], 
+            "name": "와르르생딸기설빙",
+            "subname": ["와르르생딸기설빙","생딸기설빙"], 
             "img": "https://sulbing.com/data/file/menu/1794566202_LTytbv3e_ea85ea93a5fdae61fd83d03a5c29df478342cb3f.png",
             "description": "하얀 우유얼음안에 생딸기가 한가득 들어간 제품",
             "cost": 11500,
@@ -44,6 +47,7 @@
         },
         {
             "name": "민트초코설빙",
+            "subname": ["민트초코설빙", "민초"],
             "img": "https://sulbing.com/data/file/menu/2070895364_YkmI9FsA_f09da919584b3e2953ec9de99276ec17808a4a8c.png",
             "description": "설빙이 직접 개발한 민트초코 아이스크림! 브라우니 + 오레오 + 초코슬라이스 3단콤보",
             "cost": 10900,
@@ -58,6 +62,7 @@
         },
         {
             "name": "티라미수설빙",
+            "subname": "티라미수설빙",
             "img": "https://sulbing.com/data/file/menu/1988351644_I0YiFLwl_889e90810cfd7ce994561c0cb8ae187f44803fef.png",
             "description": "달콤한 커스터드 크림과 깊고 진한 티라미수가 고소하고 쌉싸름한 설빙 커피와 절묘하게 어우러진 메뉴!",
             "cost": 11900,
@@ -71,7 +76,8 @@
             "allergy": ["우유", "대두", "계란", "밀", "쇠고기"]
         },
         {
-            "name": ["애플망고치즈설빙", "망고설빙"],
+            "name": "애플망고치즈설빙",
+            "subname": ["애플망고치즈설빙", "망고설빙"],
             "img": "https://sulbing.com/data/file/menu/3554379581_tB1EubwI_9105efcd2210cd8913700485697f216a72710c31.png",
             "description": "남녀노소 모두 좋아하는 망고의 최상급 품질인 애플망고의 달콤함과 깊고 진한 치즈 케이크가 만나 신선하고 상큼한 애플망고의 풍미를 온전히 느낄 수 있는 제품 ",
             "cost": 11900,
@@ -86,7 +92,8 @@
         },
         {
             "name": "스윗캔디구슬설빙",
-            "img": "",
+            "subname": "스윗캔디구슬설빙",
+            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=1988351642_zSil3KGe_81dd9a0d39cadf1c5b58ef935474e443504af4f3.png",
             "description": "핑크빛 달콤 머랭쿠키와 몽글몽글 솜사탕 맛 빙수",
             "cost": "몰라 공홈에 없어",
             "nutrition" :{
@@ -100,9 +107,10 @@
         },
         {
             "name": "치즈설빙",
-            "img": "",
+            "subname": "치즈설빙",
+            "img": "https://sulbing.com/bbs/board.php?bo_table=menu&wr_id=23",
             "description": "치즈케익에 입안 가득 퍼지는 치즈 가루가 더해져 깊고 진한 치즈 맛을 느낄 수 있죠, 여기에 부드러운 아이스크림과 고소한 아몬드까지 어우러져 정말 특별한 제품!",
-            "cost": "몰라 공홈에 없어",
+            "cost": "10900원",
             "nutrition" :{
                 "calories": 930,
                 "sugars": 16,

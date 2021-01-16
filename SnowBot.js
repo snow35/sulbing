@@ -32,7 +32,7 @@ client.on('message', message => {
 		let command = message.content.split(" ")[0];
 		let menu = getBingsuMenu();
 		menu.forEach(item => {
-			if (item.name.includes(message.content.replace(command, "").trim())) {
+			if (item.subname.includes(message.content.replace(command, "").trim())) {
 				let bingSuInfoEmbed = new Discord.MessageEmbed()
 					.setColor('#ddbea9')
 					.setTitle(item.name)
