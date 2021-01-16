@@ -24,9 +24,9 @@ client.on('ready', () => {
 client.on('message', message => {
 	console.log(message.content);
 
-	client.users.fetch('516590788382162945').then((user) => {
+	/*client.users.fetch('516590788382162945').then((user) => {
 		user.send('hello world!')
-	})
+	})*/
 
 	//테스트 호출
 	if (message.content === '!ping') {
