@@ -69,7 +69,6 @@ const HighCardRules = new Discord.MessageEmbed()
 //테스트 코드
 client.on('ready', () => {
 	console.log('ready!');
-	message.channel.send('ready!')
 });
 
 //입력값 확인, 실행
