@@ -193,7 +193,7 @@ client.on('message', message => {
 	}
 	else if(message.content === '!test'){
 		const Spade = client.emojis.cache.get("800032748625592340")
-		message.channel.send('${Spade}')
+		message.channel.send(Spade)
 		message.channel.send(card_dict[5])
 	}
 
