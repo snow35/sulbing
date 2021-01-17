@@ -27,7 +27,7 @@ const card_shape = {
 	1: "<:Spade:800032748625592340>",
 	2: "<:Heart:800032761867927562>",
 	3: "<:Club:800032775759200376>",
-	4: "<:Diamond:800032787876937799>"
+	4: "<@:Diamond:800032787876937799>"
 };
 
 //명령어 설명
@@ -186,7 +186,7 @@ client.on('message', message => {
 
 		client.users.fetch(secondPlayerUserId).then((user)=>{
 			user.send("Hi, "+secondPlayerUsername)
-			user.send("Player1's card is"+card_shape[1]+[card_dict.Player_one_card])
+			user.send("Player1's card is"+'${800032748625592340}'+[card_dict.Player_one_card])
 		});
 	}
 
