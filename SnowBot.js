@@ -195,6 +195,12 @@ client.on('message', message => {
 		const Spade = client.emojis.get("800032748625592340")
 		message.channel.send(Spade)
 		message.channel.send(card_dict[5])
+		message.channel.send(emoji("800032748625592340"))
+	}
+	else if(message.content === "Spade") {
+		const Spade = client.emojis.get("800032748625592340");
+		const Spade = client.emojis.find(emoji => emoji.name === "Spade");
+		message.reply(`${Spade} LMAO`);
 	}
 
 });
