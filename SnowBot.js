@@ -68,7 +68,8 @@ const HighCardRules = new Discord.MessageEmbed()
 
 //테스트 코드
 client.on('ready', () => {
-    console.log('ready!');
+	console.log('ready!');
+	message.channel.send('ready!')
 });
 
 //입력값 확인, 실행
@@ -198,7 +199,6 @@ client.on('message', message => {
 		message.channel.send(emoji("800032748625592340"))
 	}
 	else if(message.content === "Spade") {
-		const Spade = client.emojis.get("800032748625592340");
 		const Spade = client.emojis.find(emoji => emoji.name === "Spade");
 		message.reply(`${Spade} LMAO`);
 	}
