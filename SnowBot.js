@@ -184,8 +184,6 @@ client.on('message', message => {
 			user.send("Player2's card is"+card_shape.Player_two_card_shape+card_dict.Player_two_card)
 		});
 
-		const Spade = bot.emojis.cache.get("800032748625592340")
-		message.channel.send(`${Spade}`)
 		client.users.fetch(secondPlayerUserId).then((user)=>{
 			user.send("Hi, "+secondPlayerUsername)
 			user.send("Player1's card is"+'${emoji}'+card_dict[Player_one_card])
@@ -193,7 +191,7 @@ client.on('message', message => {
 	}
 	else if(message.content === '!test'){
 		message.channel.send(card_dict[5])
-		message.channel.send(emoji("800032748625592340"))
+		message.channel.send("<:Spade:800032748625592340>")
 	}
 	
 
