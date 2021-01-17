@@ -192,7 +192,7 @@ client.on('message', message => {
 		});
 	}
 	else if(message.content === '!test'){
-		const Spade = bot.emojis.cache.get("800032748625592340")
+		const Spade = sulbingbot.emojis.cache.get("800032748625592340")
 		message.channel.send(`${Spade}`)
 	}
 
