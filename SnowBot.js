@@ -7,27 +7,27 @@ function getBingsuMenu() {
 }
 //카드넘버 딕셔너리
 const card_dict = {
-	2: { id: 2, name: ":two:" },
-	3: { id: 3, name: ":three:" },
-	4: { id: 4, name: ":four:" },
-	5: { id: 5, name: ":five:" },
-	6: { id: 6, name: ":six:" },
-	7: { id: 7, name: ":seven:" },
-	8: { id: 8, name: ":eight:" },
-	9: { id: 9, name: ":nine:" },
-	10: { id: 10, name: ":keycap_ten:" },
-	11: { id: 11, name: ":regional_indicator_j:" },
-	12: { id: 12, name: ":regional_indicator_q:" },
-	13: { id: 13, name: ":regional_indicator_k:" },
-	14: { id: 14, name: ":regional_indicator_a:" },
-	15: { id: 15, name: ":regional_indicator_a:" },
+	2: ":two:" ,
+	3: ":three:",
+	4: ":four:",
+	5: ":five:",
+	6: ":six:",
+	7: ":seven:",
+	8: ":eight:",
+	9: ":nine:",
+	10: ":keycap_ten:",
+	11: ":regional_indicator_j:",
+	12: ":regional_indicator_q:",
+	13: ":regional_indicator_k:",
+	14: ":regional_indicator_a:",
+	15: ":regional_indicator_a:" 
 };
 //카드모양 딕셔너리
 const card_shape = {
-	1: {id: 1, name: "<:Spade:800032748625592340>"},
-	2: {id: 2, name: "<:Heart:800032761867927562>"},
-	3: {id: 3, name: "<:Club:800032775759200376>"},
-	4: {id: 4, name: "<:Diamond:800032787876937799>"}
+	1: "<:Spade:800032748625592340>",
+	2: "<:Heart:800032761867927562>",
+	3: "<:Club:800032775759200376>",
+	4: "<:Diamond:800032787876937799>"
 };
 
 //명령어 설명
@@ -152,27 +152,41 @@ client.on('message', message => {
 	}
 
 	else if(message.content.startsWith("!player")){
+		let players = message.mentions.users;
+		let playersArray = players.array();
+
+		let firstPlayerUsername;
+ 		let firstPlayerUserId;
+ 		let secondPlayerUsername;
+ 		let secondPlayerUserId;
+
+		 if (playersArray.length == 2) {
+			firstPlayerUsername = playersArray[0].username;
+			firstPlayerUserId = playersArray[0].id;
+			secondPlayerUsername = playersArray[1].username;
+			secondPlayerUserId = playersArray[1].id;
+		}
+
+		console.log("1P: " + firstPlayerUsername + " / " + firstPlayerUserId);
+		console.log("2P: " + secondPlayerUsername + " / " + secondPlayerUserId);
+		 
 		var Player_one_card = Math.floor(Math.random() * 15) + 2;
 		var Player_two_card = Math.floor(Math.random() * 15) + 2;
 		var Player_one_card_shape = Math.floor(Math.random() * 4) + 1;
 		var Player_two_card_shape = Math.floor(Math.random() * 4) + 1;
 		console.log(Player_one_card);
 		console.log(Player_two_card);
+		console.log(Player_one_card_shape);
+		console.log(Player_two_card_shape);
 
-		var Player = message.mentions.users.id;
-		console.log(Player);
+		client.users.fetch(firstPlayerUserId).then((user)=>{
+			user.send("Hi, "+firstPlayerUsername)
+			user.send("Player2's card is"+card_shape.Player_two_card_shape+card_dict.Player_two_card)
+		});
 
-		var user1 = message.mentions.users.first();
-		var user1_id = message.mentions.users.first().id;
-		var name1 = user1.username;
-		//var user2 = message.mentions.users.second();
-		//var name2 = user2.username;
-		//let player = message.mentions;
-		message.channel.send("Player1 : "+name1)
-		//message.channel.send("Player2 : "+name2)
-		//console.log(name)
-		client.users.fetch(user1_id).then((user)=>{
-			user.send("Player2's card is"+card_shape[Player_two_card_shape]+card_dict[Player_two_card])
+		client.users.fetch(secondPlayerUserId).then((user)=>{
+			user.send("Hi, "+secondPlayerUsername)
+			user.send("Player1's card is"+card_shape.Player_one_card_shape+card_dict.Player_one_card)
 		});
 	}
 
