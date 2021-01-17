@@ -27,7 +27,7 @@ const card_shape = {
 	1: "<:Spade:800032748625592340>",
 	2: "<:Heart:800032761867927562>",
 	3: "<:Club:800032775759200376>",
-	4: "<@:Diamond:800032787876937799>"
+	4: "<:Diamond:800032787876937799>"
 };
 
 //명령어 설명
@@ -192,7 +192,7 @@ client.on('message', message => {
 		});
 	}
 	else if(message.content === '!test'){
-		const Spade = client.emojis.cache.get("800032748625592340")
+		const Spade = client.emojis.get("800032748625592340")
 		message.channel.send(Spade)
 		message.channel.send(card_dict[5])
 	}
