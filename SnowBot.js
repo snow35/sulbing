@@ -186,7 +186,7 @@ client.on('message', message => {
 
 		client.users.fetch(secondPlayerUserId).then((user)=>{
 			user.send("Hi, "+secondPlayerUsername)
-			user.send("Player1's card is"+card_dict[Player_one_card_shape]+card_dict[Player_one_card])
+			user.send("Player1's card is"+card_shape[Player_one_card_shape]+card_dict[Player_one_card])
 		});
 	}
 	else if(message.content === '!test'){
