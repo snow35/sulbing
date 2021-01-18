@@ -7,20 +7,19 @@ function getBingsuMenu() {
 }
 //카드넘버 딕셔너리
 const card_dict = {
-	2: ":two:" ,
-	3: ":three:",
-	4: ":four:",
-	5: ":five:",
-	6: ":six:",
-	7: ":seven:",
-	8: ":eight:",
-	9: ":nine:",
-	10: ":keycap_ten:",
-	11: ":regional_indicator_j:",
-	12: ":regional_indicator_q:",
-	13: ":regional_indicator_k:",
-	14: ":regional_indicator_a:",
-	15: ":regional_indicator_a:" 
+	2: "<:B_2:800474788907712542>" ,
+	3: "<:B_3:800476373159641148>",
+	4: "<:B_4:800476384426197022>",
+	5: "<:B_5:800476396484427816>",
+	6: "<:B_6:800476410698530826>",
+	7: "<:B_7:800476417993080841>",
+	8: "<:B_8:800476428209487882>",
+	9: "<:B_9:800476440927010836>",
+	10: "<:B_10:800478017860141058>",
+	11: "<:B_J:800478030149320775>",
+	12: "<:B_Q:800478046259642378>",
+	13: "<:B_K:800478059924160542>",
+	14: "<:B_A:800474199792681000>"
 };
 //카드모양 딕셔너리
 const card_shape = {
@@ -63,7 +62,8 @@ const HighCardRules = new Discord.MessageEmbed()
 		{ name: ':one: 양측 플레이어는 카드를 한장씩 뽑게 됩니다', value: '자신의 카드는 볼 수 없으며 상대방의 카드만 볼 수 있습니다\n상대방의 카드는 DM으로 전송됩니다\n​'},
 		{ name: ':two: 자신의 차례에 자신의 카드가 상대방의 카드보다\n	   더 크다고 생각하시면 코인을 배팅합니다', value:'**!(숫자)** : 처음 제시할때 사용합니다\n**!call** : 상대방이 지불한 양과 같은 양의 코인을 지불합니다\n**!double** : 상대방이 지불한 양의 두배를 지불합니다.\n**!gg** : 자신이 질것 같다고 생각되는경우 게임을 종료하고 상대방이 승리합니다\n​'},
 		{ name: ':three: 각각 3번의 배팅후에 결과가 공개되며\n	   더 큰 숫자를 가진 사람이 배팅한 코인을 전부 가져갑니다', value:'​'},
-		{ name: '카드의 족보는 다음과 같습니다', value: ':two:<:three:<:four:<:five:<:six:<:seven:<:eight:<:nine:<:keycap_ten:<:regional_indicator_j:<:regional_indicator_q:<:regional_indicator_k:<:regional_indicator_a:'}
+		{ name: '카드의 족보는 다음과 같습니다', value: "<:B_2:800474788907712542> <:B_3:800476373159641148> <:B_4:800476384426197022> <:B_5:800476396484427816> <:B_6:800476410698530826> <:B_7:800476417993080841> <:B_8:800476428209487882> <:B_9:800476440927010836> <:B_10:800478017860141058> <:B_J:800478030149320775> <:B_Q:800478046259642378> <:B_K:800478059924160542> <:B_A:800474199792681000>"},
+		{ name: '카드의 숫자가 같은 경우 모양에 따라 결정됩니다', value: "<:Spade:800032748625592340> <:Heart:800032761867927562> <:Club:800032775759200376> <:Diamond:800032787876937799>"}
 	);
 
 //테스트 코드
@@ -160,13 +160,27 @@ client.on('message', message => {
  		let secondPlayerUsername;
  		let secondPlayerUserId;
 
-		 if (playersArray.length == 2) {
+		if (playersArray.length == 2) {
 			firstPlayerUsername = playersArray[0].username;
 			firstPlayerUserId = playersArray[0].id;
 			secondPlayerUsername = playersArray[1].username;
 			secondPlayerUserId = playersArray[1].id;
 		}
+		//초기 우승자 설정
+		let pre_winner;
+		if (Player_one_card > Player_two_card){
+			pre_winner=firstPlayerUsername;
+		}
 
+		else if(Player_one_card == Player_two_card){
+			if(Player_one_card_shape>Player_two_card_shape){
+				pre_winner=firstPlayerUsername;
+			}
+			else if(Player_one_card_shape<Player_two_card_shape){
+				pre_winner=secondPlayerUsername
+			}
+		}
+		console.log("prewinner is " + pre_winner);
 		console.log("1P: " + firstPlayerUsername + " / " + firstPlayerUserId);
 		console.log("2P: " + secondPlayerUsername + " / " + secondPlayerUserId);
 		 
