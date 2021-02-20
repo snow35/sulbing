@@ -225,6 +225,6 @@ client.on('message', (message) => {
       .addFields(
         { name: 'https://www.youtube.com/playlist?list=PL81QvWaskBuv3NdYolkknz7EskmsGoDe0D', value: '설\'s_pop 플레이리스트 입니다(신나는.ver)' },
         { name: 'https://www.youtube.com/playlist?list=PL81QvWaskBuujAYez-K3TIyLeEIcuEn2M', value: '설\'s_pop_2탄 플레이리스트 입니다(잔잔한.ver)' }
-                       ));
+                       );
 });
 client.login(process.env.TOKEN);
