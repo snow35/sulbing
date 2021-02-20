@@ -224,8 +224,8 @@ client.on('message', (message) => {
       .setColor('#ddbea9')
       .setTitle(':musical_note:설\'s_Playlist목록 입니다(계속 추가될 예정)')
       .addFields(
-        { name: ':fire:설\'s_pop 플레이리스트 입니다(신나는.ver)', value: 'https://www.youtube.com/playlist?list=PL81QvWaskBuv3NdYolkknz7EskmsGoDe0D' },
-        { name: ':cloud_rain:설\'s_pop_2탄 플레이리스트 입니다(잔잔한.ver)', value: 'https://www.youtube.com/playlist?list=PL81QvWaskBuujAYez-K3TIyLeEIcuEn2M' }
+        { name: ':fire:설\'s_pop 플레이리스트 입니다(신나는.ver)', value: 'https://www.youtube.com/playlist?list=PL81QvWaskBuv3NdYolkknz7EskmsGoDe0' },
+        { name: ':cloud_rain:설\'s_pop_2탄 플레이리스트 입니다(잔잔한.ver)', value: 'https://www.youtube.com/watch?v=jJPMnTXl63E&list=PL81QvWaskBuujAYez-K3TIyLeEIcuEn2M' }
                        ));}
 });
 client.login(process.env.TOKEN);
