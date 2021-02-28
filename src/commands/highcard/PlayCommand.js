@@ -1,7 +1,7 @@
-const Discord = require('discord.js');
 const { Command } = require('discord.js-commando');
 
 const CatLoggr = require('cat-loggr');
+
 const log = new CatLoggr().setLevel('debug');
 
 const CardNumber = require('./resources/CardNumber').black;
@@ -31,13 +31,13 @@ module.exports = class PlayCommand extends Command {
   }
 
   async run(msg, args) {
-    let firstPlayer = args.player1;
-    let secondPlayer = args.player2;
+    const firstPlayer = args.player1;
+    const secondPlayer = args.player2;
 
-    let firstPlayerUsername = args.player1.displayName;
-    let firstPlayerUserId = args.player1.id;
-    let secondPlayerUsername = args.player2.displayName;
-    let secondPlayerUserId = args.player2.id;
+    const firstPlayerUsername = args.player1.displayName;
+    const firstPlayerUserId = args.player1.id;
+    const secondPlayerUsername = args.player2.displayName;
+    const secondPlayerUserId = args.player2.id;
 
     const firstPlayerCard = Math.floor(Math.random() * 15) + 2;
     const secondPlayerCard = Math.floor(Math.random() * 15) + 2;
@@ -66,14 +66,14 @@ module.exports = class PlayCommand extends Command {
     firstPlayer.createDM().then((dmChannel) => {
       dmChannel.send(`Hi, ${firstPlayerUsername}`);
       dmChannel.send(
-        `Player2's card is${CardShape[secondPlayerCardShape]}${CardNumber[secondPlayerCard]}`
+        `Player2's card is${CardShape[secondPlayerCardShape]}${CardNumber[secondPlayerCard]}`,
       );
     });
 
     secondPlayer.createDM().then((dmChannel) => {
       dmChannel.send(`Hi, ${secondPlayerUsername}`);
       dmChannel.send(
-        `Player1's card is${CardShape[firstPlayerCardShape]}${CardNumber[firstPlayerCard]}`
+        `Player1's card is${CardShape[firstPlayerCardShape]}${CardNumber[firstPlayerCard]}`,
       );
     });
   }

@@ -1,4 +1,3 @@
-const Discord = require('discord.js');
 const { Command } = require('discord.js-commando');
 
 module.exports = class GoodLuckLuCommand extends Command {
@@ -11,7 +10,7 @@ module.exports = class GoodLuckLuCommand extends Command {
     });
   }
 
-  async run(msg, args) {
+  async run(msg) {
     msg.say('루님화이티이잉!');
   }
 };

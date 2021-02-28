@@ -12,8 +12,8 @@ module.exports = class PopListCommand extends Command {
     });
   }
 
-  async run(msg, args) {
-    let playlistEmbed = new Discord.MessageEmbed()
+  async run(msg) {
+    const playlistEmbed = new Discord.MessageEmbed()
       .setColor('#ddbea9')
       .setTitle(":musical_note: | 설's_Playlist목록 입니다(계속 추가될 예정)")
       .addFields(
@@ -31,7 +31,7 @@ module.exports = class PopListCommand extends Command {
           name: ":headphones: | 설's_lofi 플레이리스트 입니다",
           value:
             'https://www.youtube.com/playlist?list=PL81QvWaskButF1wxY5QQv0a-7U66e0Mnh',
-        }
+        },
       );
     msg.embed(playlistEmbed);
   }

@@ -1,8 +1,6 @@
-const Discord = require('discord.js');
 const { Command } = require('discord.js-commando');
 
 const CardNumber = require('../highcard/resources/CardNumber');
-const CardShape = require('../highcard/resources/CardShape');
 
 module.exports = class CardTestCommand extends Command {
   constructor(client) {
@@ -14,7 +12,7 @@ module.exports = class CardTestCommand extends Command {
     });
   }
 
-  async run(msg, args) {
+  async run(msg) {
     msg.say(CardNumber.black[5]);
     msg.say('<:Spade:800032748625592340>');
   }

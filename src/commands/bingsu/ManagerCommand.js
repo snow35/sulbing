@@ -12,8 +12,8 @@ module.exports = class ManagerCommand extends Command {
     });
   }
 
-  async run(msg, args) {
-    let helpEmbed = new Discord.MessageEmbed()
+  async run(msg) {
+    const helpEmbed = new Discord.MessageEmbed()
       .setColor('#ddbea9')
       .setTitle('인절미빙수 봇 명령어입니다.')
       .addFields(
@@ -28,7 +28,7 @@ module.exports = class ManagerCommand extends Command {
         {
           name: ':man_raising_hand: | !주문 (빙수이름)',
           value: '원하는 빙수를 주문할수 있어요!',
-        }
+        },
       );
     msg.embed(helpEmbed);
   }

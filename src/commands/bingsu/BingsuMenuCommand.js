@@ -19,7 +19,7 @@ module.exports = class BingsuMenuCommand extends Command {
     });
   }
 
-  async run(msg, args) {
+  async run(msg) {
     const bingsuListEmbed = new Discord.MessageEmbed()
       .setColor('#ddbea9')
       .setTitle('등록된 빙수 종류입니다.');

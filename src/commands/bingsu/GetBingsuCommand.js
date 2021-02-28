@@ -38,11 +38,11 @@ module.exports = class GetBingsuCommand extends Command {
           .addField('가격', `${item.cost}원`, true)
           .addField(
             '영양성분',
-            `열량(Kcal): ${item.nutrition.calories}\n` +
-              `당류(g): ${item.nutrition.sugars}\n` +
-              `단백질(g): ${item.nutrition.protein}\n` +
-              `포화지방(g): ${item.nutrition.saturatedFat}\n` +
-              `나트륨(mg): ${item.nutrition.sodium}`
+            `열량(Kcal): ${item.nutrition.calories}\n`
+              + `당류(g): ${item.nutrition.sugars}\n`
+              + `단백질(g): ${item.nutrition.protein}\n`
+              + `포화지방(g): ${item.nutrition.saturatedFat}\n`
+              + `나트륨(mg): ${item.nutrition.sodium}`,
           )
           .addField('알레르기', item.allergy.join(', '));
         msg.embed(bingSuInfoEmbed);

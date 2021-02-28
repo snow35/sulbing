@@ -2,7 +2,7 @@
   "name": "sulbing",
   "version": "1.0.0",
   "description": "This is the SulbingBot",
-  "main": "SnowBot.js",
+  "main": "app.js",
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -10,7 +10,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/SnowBot.js"
+    "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/ --fix",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",

@@ -11,8 +11,8 @@ module.exports = class HighcardCommand extends Command {
     });
   }
 
-  async run(msg, args) {
-    let highcardEmbed = new Discord.MessageEmbed()
+  async run(msg) {
+    const highcardEmbed = new Discord.MessageEmbed()
       .setColor('#ddbea9')
       .setTitle(':black_joker: | **HIGHCARD에 오신것을 환영합니다**')
       .addFields(
@@ -20,7 +20,7 @@ module.exports = class HighcardCommand extends Command {
           name: ':page_facing_up: | !Help',
           value: 'HGIHCARD기본 사용법입니다',
         },
-        { name: ':books: | !Rules', value: 'HIGHCARD게임 룰을 설명해줘요' }
+        { name: ':books: | !Rules', value: 'HIGHCARD게임 룰을 설명해줘요' },
       );
     msg.embed(highcardEmbed);
   }

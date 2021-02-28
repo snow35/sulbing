@@ -16,9 +16,7 @@ client
   .on('warn', log.warn)
   .on('debug', log.log)
   .on('ready', () => {
-    log.info(
-      `Client ready; logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`
-    );
+    log.info(`Client ready; logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`);
   })
   .on('disconnect', () => {
     log.warn('Disconnected!');
@@ -31,30 +29,23 @@ client
     log.error(`Error in command ${cmd.groupID}:${cmd.memberName}`, err);
   })
   .on('commandBlocked', (msg, reason) => {
-    log.info(oneLine`
-			Command ${msg.command ? `${msg.command.groupID}:${msg.command.memberName}` : ''}
-			blocked; ${reason}
-		`);
+    log.info(oneLine`Command ${msg.command ? `${msg.command.groupID}:${msg.command.memberName}` : ''}
+      blocked; ${reason}`);
   })
   .on('commandPrefixChange', (guild, prefix) => {
-    log.info(oneLine`
-			Prefix ${prefix === '' ? 'removed' : `changed to ${prefix || 'the default'}`}
-			${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.
-		`);
+    log.info(oneLine`Prefix ${prefix === '' ? 'removed' : `changed to ${prefix || 'the default'}`}
+      ${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.`);
   })
   .on('commandStatusChange', (guild, command, enabled) => {
-    log.info(oneLine`
-			Command ${command.groupID}:${command.memberName}
-			${enabled ? 'enabled' : 'disabled'}
-			${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.
-		`);
+    log.info(oneLine`Command ${command.groupID}:${command.memberName}
+      ${enabled ? 'enabled' : 'disabled'}
+      ${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.`);
   })
   .on('groupStatusChange', (guild, group, enabled) => {
     log.info(oneLine`
-			Group ${group.id}
-			${enabled ? 'enabled' : 'disabled'}
-			${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.
-		`);
+      Group ${group.id}
+      ${enabled ? 'enabled' : 'disabled'}
+      ${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.`);
   });
 
 client.registry
