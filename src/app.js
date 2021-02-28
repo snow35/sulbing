@@ -7,7 +7,7 @@ const CatLoggr = require('cat-loggr');
 const log = new CatLoggr().setLevel('debug');
 
 const client = new commando.Client({
-  owner: '516590788382162945',
+  owner: ['516590788382162945', '427328263896039435', '439817891240607746'],
   commandPrefix: '!',
 });
 
