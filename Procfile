@@ -1,1 +1,1 @@
-worker: node SnowBot.js
+worker: node src/app.js
