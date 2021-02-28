@@ -51,7 +51,7 @@ client
 client.registry
   .registerDefaultTypes()
   .registerDefaultGroups()
-  .registerDefaultCommands(!{ unknownCommand: false })
+  .registerDefaultCommands({ unknownCommand: false })
   .registerGroup('bingsu', 'Bingsu')
   .registerGroup('highcard', 'HIGHCARD')
   .registerGroup('info', 'Info')
