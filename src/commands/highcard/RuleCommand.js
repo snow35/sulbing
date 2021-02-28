@@ -50,7 +50,7 @@ module.exports = class RuleCommand extends Command {
             + `${CardNumber.black[7]} ${CardNumber.black[8]} `
             + `${CardNumber.black[9]} ${CardNumber.black[10]} `
             + `${CardNumber.black[11]} ${CardNumber.black[12]} `
-            + `${CardNumber.black[13]} ${CardNumber.black[1]},`,
+            + `${CardNumber.black[13]} ${CardNumber.black[14]},`,
         },
         {
           name: `${CardNumber.red[5]} | 카드의 숫자가 같은 경우 모양에 따라 결정됩니다`,
