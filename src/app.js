@@ -24,10 +24,10 @@ client
   .on('reconnecting', () => {
     log.warn('Reconnecting...');
   })
-  /*.on('commandError', (cmd, err) => {
+  .on('commandError', (cmd, err) => {
     if (err instanceof commando.FriendlyError) return;
     log.error(`Error in command ${cmd.groupID}:${cmd.memberName}`, err);
-  })*/
+  })
   .on('commandBlocked', (msg, reason) => {
     log.info(oneLine`Command ${msg.command ? `${msg.command.groupID}:${msg.command.memberName}` : ''}
       blocked; ${reason}`);
