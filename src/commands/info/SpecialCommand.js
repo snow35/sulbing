@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { Command } = require('discord.js-commando');
 
-module.exports = class PopListCommand extends Command {
+module.exports = class SpecialCommand extends Command {
   constructor(client) {
     super(client, {
       name: '대한독립만세',
@@ -34,9 +34,9 @@ module.exports = class PopListCommand extends Command {
             '- 3.1독립선언 1주년 기념식은 상해 올림픽대극장에서 성대하게 진행되었고, 1946년 2월 21일 대한독립을 위해 목숨을 바친 애국열사에 대한 감사를 표하는 것으로 의미가 제한되었다.',
         },
         {
-            name: "우리 모두 대한독립을 위해 목숨을 받친 애국열사분들께 감사한 마음으로 3.1절을 보내도록 합시다!",
+            name: ":heart: | 우리의 마음가짐",
             value:
-              ' ',
+              '우리 모두 대한독립을 위해 목숨을 받친 애국열사분들께 감사한 마음으로 3.1절을 보내도록 합시다!',
         },
       );
     msg.embed(playlistEmbed);
