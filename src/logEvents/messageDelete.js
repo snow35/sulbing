@@ -13,9 +13,9 @@ dayjs.extend(dayjsTimezone);
 dayjs.extend(localizedFormat);
 
 module.exports = (message) => {
-  if (!message.guild) return;
+  if (!message.guild && message.author.bot) return;
 
-  const logWebhook = new Discord.WebhookClient('825747119813165086', 'iwxu3LSN8lqh1ImNIzzVKge42gK9nJFdnW-lRFFjZWuyjqnxfLFDp9Z7hLjStINh7ux-');
+  const logWebhook = new Discord.WebhookClient('825781648900620319', 'UWCI9Bgn0xWMWSVLKzBX8LODGXDWJfvYuhMSa6ybDAVo-RVLLqc7bl4YYXlR6flrL6O');
 
   const messageID = message.id;
 
