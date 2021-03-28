@@ -11,6 +11,9 @@ const client = new commando.Client({
   commandPrefix: '!',
 });
 
+const messageDelete = require('./logEvents/messageDelete');
+const messageUpdate = require('./logEvents/messageUpdate');
+
 client
   .on('error', log.error)
   .on('warn', log.warn)
@@ -47,6 +50,9 @@ client
       ${enabled ? 'enabled' : 'disabled'}
       ${guild ? `in guild ${guild.name} (${guild.id})` : 'globally'}.`);
   });
+
+client.on('messageDelete', messageDelete)
+  .on('messageUpdate', messageUpdate);
 
 client.registry
   .registerDefaultTypes()
