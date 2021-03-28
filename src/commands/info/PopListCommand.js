@@ -32,6 +32,11 @@ module.exports = class PopListCommand extends Command {
           value:
             'https://www.youtube.com/playlist?list=PL81QvWaskButF1wxY5QQv0a-7U66e0Mnh',
         },
+        {
+          name: ":tea: | 설's_R&B 플레이리스트 입니다",
+          value:
+            'https://www.youtube.com/playlist?list=PL81QvWaskBuuN425YmAKXQou6iX1N_pq9',
+        },
       );
     msg.embed(playlistEmbed);
   }
