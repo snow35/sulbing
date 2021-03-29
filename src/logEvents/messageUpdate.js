@@ -20,9 +20,7 @@ module.exports = (oldMessage, newMessage) => {
   const messageID = oldMessage.id;
 
   const oldContent = Optional.ofNullable(oldMessage.content).orElse('(내용이 없습니다.)');
-  const oldCleanContent = Optional.ofNullable(oldMessage.cleanContent).orElse('(내용이 없습니다.)');
   const newContent = Optional.ofNullable(newMessage.content).orElse('(내용이 없습니다.)');
-  const newCleanContent = Optional.ofNullable(newMessage.cleanContent).orElse('(내용이 없습니다.)');
 
   const { channel } = oldMessage;
   const category = channel.parent;
@@ -43,8 +41,8 @@ module.exports = (oldMessage, newMessage) => {
   const messageEditLogEmbed = new Discord.MessageEmbed()
     .setTitle(`메시지 수정됨. (메시지 ID: \`${messageID}\`)`)
     .setColor(0x228bff)
-    .addField('수정 전 내용', `원본 내용\n\`\`\`${oldContent}\`\`\`\n깨끗한 내용\n\`\`\`${oldCleanContent}\`\`\``)
-    .addField('수정 후 내용', `원본 내용\n\`\`\`${newContent}\`\`\`\n깨끗한 내용\n\`\`\`${newCleanContent}\`\`\``)
+    .addField('수정 전 내용', `원본 내용\n\`\`\`${oldContent}\`\`\``)
+    .addField('수정 후 내용', `원본 내용\n\`\`\`${newContent}\`\`\``)
     .addField('위치', stripIndents`
     채널: ${Optional.ofNullable(channel.name).orElse('채널 이름이 없습니다.')} (\`#${Optional.ofNullable(channel.id).orElse('0')}\`)
     카테고리: ${Optional.ofNullable(category.name).orElse('카테고리가 없습니다.')} (\`#${Optional.ofNullable(category.id).orElse('0')}\`)
