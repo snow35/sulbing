@@ -13,7 +13,7 @@ dayjs.extend(dayjsTimezone);
 dayjs.extend(localizedFormat);
 
 module.exports = (oldMessage, newMessage) => {
-  if ((!oldMessage.guild || oldMessage.content === newMessage.content) && message.author.bot) return;
+  if ((!oldMessage.guild || oldMessage.content === newMessage.content) && oldMessage.author.bot) return;
 
   const logWebhook = new Discord.WebhookClient('825781648900620319', 'UWCI9Bgn0xWMWSVLKzBX8LODGXDWJfvYuhMSa6ybDAVo-RVLLqc7bl4YYXlR6flrL6O');
 
