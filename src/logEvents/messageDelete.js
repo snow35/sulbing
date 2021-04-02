@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const emojiRegex = require('emoji-regex')();
 const dayjs = require('dayjs');
 const dayjsKorean = require('dayjs/locale/ko');
 // const dayjsEnglish = require('dayjs/locale/en');
@@ -15,6 +16,7 @@ dayjs.extend(localizedFormat);
 module.exports = (message) => {
   if (!message.guild) return;
   if (message.author.bot) return;
+  if (emojiRegex.test(message.content)) return; // for Luby emoji zoom
 
   const logWebhook = new Discord.WebhookClient('825781648900620319', 'OUWCI9Bgn0xWMWSVLKzBX8LODGXDWJfvYuhMSa6ybDAVo-RVLLqc7bl4YYXlR6flrL6O');
 
