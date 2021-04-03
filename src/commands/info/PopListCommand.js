@@ -37,6 +37,11 @@ module.exports = class PopListCommand extends Command {
           value:
             'https://www.youtube.com/playlist?list=PL81QvWaskBuuN425YmAKXQou6iX1N_pq9',
         },
+        {
+          name: ":fog: | 한쿡_R&B 플레이리스트 입니다(멜론에 있는 플레이리스트 입니다)",
+          value:
+            'https://www.youtube.com/playlist?list=PL81QvWaskBuvY3Mpj_9q4ZnnDL3S4qsfd',
+        },
       );
     msg.embed(playlistEmbed);
   }
