@@ -11,6 +11,6 @@ module.exports = class SnackCommand extends Command {
   }
 
   async run(msg) {
-    msg.say('히히 뺏어먹기 냠냠');
+    msg.say('간식내놔아아아아');
   }
 };
