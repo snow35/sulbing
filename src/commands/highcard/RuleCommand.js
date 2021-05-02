@@ -16,7 +16,6 @@ module.exports = class RuleCommand extends Command {
   }
 
   async run(msg) {
-
     const firstRuleEmbed = new Discord.MessageEmbed()
       .setColor('#ddbea9')
       .setTitle(':black_joker: | HIGHCARD 규칙입니다')
@@ -47,8 +46,8 @@ module.exports = class RuleCommand extends Command {
       .setColor('#ddbea9')
       .setTitle(':black_joker: | HIGHCARD 규칙입니다')
       .addField(`${CardNumber.red[4]} | 카드의 족보는 다음과 같습니다`,
-        stripIndents`${CardNumber.black[14]} ${CardNumber.black[2]}`
-        + `${CardNumber.black[3]} ${CardNumber.black[4]}`
+        `${stripIndents`${CardNumber.black[14]} ${CardNumber.black[2]}`
+        }${CardNumber.black[3]} ${CardNumber.black[4]}`
         + `${CardNumber.black[5]} ${CardNumber.black[6]}`
         + `${CardNumber.black[7]} ${CardNumber.black[8]}`
         + `${CardNumber.black[9]} ${CardNumber.black[10]}`);
@@ -65,30 +64,30 @@ module.exports = class RuleCommand extends Command {
     const nowPage = await msg.embed(pages[nowPageIndex]);
     pageEmojis.forEach(async (pageEmoji) => { await nowPage.react(pageEmoji); });
     const pageReactionCollector = nowPage.createReactionCollector(
-      (reaction, user) => pageEmojis.includes(reaction.emoji.name) && user.id === msg.author.id, 18000);
-    pageReactionCollector.on('collect', reaction => {
+      (reaction, user) => pageEmojis.includes(reaction.emoji.name) && user.id === msg.author.id,
+      18000,
+    );
+    pageReactionCollector.on('collect', (reaction) => {
       reaction.users.remove(msg.author);
       switch (reaction.emoji.name) {
         case pageEmojis[0]:
           nowPageIndex = 0;
-          console.log(nowPageIndex);
           break;
         case pageEmojis[1]:
           nowPageIndex = (nowPageIndex === 0) ? pages.length - 1 : nowPageIndex - 1;
-          console.log(nowPageIndex);
           break;
         case pageEmojis[2]:
           nowPageIndex = (nowPageIndex === pages.length - 1) ? 0 : nowPageIndex + 1;
-          console.log(nowPageIndex);
           break;
         case pageEmojis[3]:
           nowPage.delete();
           break;
+        default: break;
       }
       if (!nowPage.deleted) nowPage.edit(pages[nowPageIndex]);
     });
     pageReactionCollector.on('end', () => {
       if (!nowPage.deleted) nowPage.reactions.removeAll();
-    })
+    });
   }
 };
