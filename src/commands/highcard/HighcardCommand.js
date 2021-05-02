@@ -17,10 +17,10 @@ module.exports = class HighcardCommand extends Command {
       .setTitle(':black_joker: | **HIGHCARD에 오신것을 환영합니다**')
       .addFields(
         {
-          name: ':page_facing_up: | !Help',
+          name: ':page_facing_up: | s!help',
           value: 'HGIHCARD기본 사용법입니다',
         },
-        { name: ':books: | !Rules', value: 'HIGHCARD게임 룰을 설명해줘요' },
+        { name: ':books: | s!rules', value: 'HIGHCARD게임 룰을 설명해줘요' },
       );
     msg.embed(highcardEmbed);
   }

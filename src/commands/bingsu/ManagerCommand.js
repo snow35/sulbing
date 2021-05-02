@@ -10,6 +10,14 @@ module.exports = class ManagerCommand extends Command {
       memberName: '점장',
       description: '인절미빙수 봇 명령어입니다.',
     });
+    client.on('message', message => {
+      if (message.content === 's!점장' && message.author.id === '796342455762419712') {
+        const helpEmbed = new Discord.MessageEmbed()
+          .setColor('#ddbea9')
+          .setTitle('안녕하세요, 설빙입니다 :)');
+        message.channel.send(helpEmbed);
+      }
+    });
   }
 
   async run(msg) {
@@ -18,15 +26,15 @@ module.exports = class ManagerCommand extends Command {
       .setTitle('인절미빙수 봇 명령어입니다.')
       .addFields(
         {
-          name: ':shaved_ice: | !빙수 (빙수이름)',
+          name: ':shaved_ice: | s!빙수 (빙수이름)',
           value: '원하는 빙수의 정보를 알려줘요!',
         },
         {
-          name: ':clipboard: | !빙수메뉴판',
-          value: '현재 등록된 빙수를 보여줘요\n!메뉴판 으로도 호출가능해요',
+          name: ':clipboard: | s!빙수메뉴판',
+          value: '현재 등록된 빙수를 보여줘요\ns!메뉴판 으로도 호출가능해요',
         },
         {
-          name: ':man_raising_hand: | !주문 (빙수이름)',
+          name: ':man_raising_hand: | s!주문 (빙수이름)',
           value: '원하는 빙수를 주문할수 있어요!',
         },
       );
