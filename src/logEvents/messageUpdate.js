@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const dayjs = require('dayjs');
-const dayjsKorean = require('dayjs/locale/ko');
+// const dayjsKorean = require('dayjs/locale/ko');
 // const dayjsEnglish = require('dayjs/locale/en');
 const localizedFormat = require('dayjs/plugin/localizedFormat');
 const dayjsUTC = require('dayjs/plugin/utc');

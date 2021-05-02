@@ -11,7 +11,7 @@ function getBingsuMenu() {
 
 function embedBingsuInfo(bingsu) {
   const menu = getBingsuMenu();
-  menu.forEach((item) => {
+  menu.forEach((item) => { // TODO: 이거 return 수정
     if (item.subname.includes(bingsu)) {
       const bingSuInfoEmbed = new Discord.MessageEmbed()
         .setColor('#ddbea9')
@@ -21,12 +21,11 @@ function embedBingsuInfo(bingsu) {
         .addField('제품명', item.name, true)
         .addField('가격', `${item.cost}원`, true)
         .addField('영양성분',
-          stripIndents`열량(Kcal): ${item.nutrition.calories}
+          stripIndent`열량(Kcal): ${item.nutrition.calories}
           당류(g): ${item.nutrition.sugars}
           단백질(g): ${item.nutrition.protein}
           포화지방(g): ${item.nutrition.saturatedFat}
-          나트륨(mg): ${item.nutrition.sodium}`
-        )
+          나트륨(mg): ${item.nutrition.sodium}`)
         .addField('알레르기', item.allergy.join(', '));
       return bingSuInfoEmbed;
     }
@@ -48,7 +47,7 @@ module.exports = class GetBingsuCommand extends Command {
         },
       ],
     });
-    client.on('message', message => {
+    client.on('message', (message) => {
       if (message.content.startsWith('s!빙수') && message.author.id === '796342455762419712') {
         message.channel.send(embedBingsuInfo(message.content.split(' ')[1]));
       }

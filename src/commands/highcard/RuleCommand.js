@@ -1,10 +1,8 @@
 const Discord = require('discord.js');
 const { Command } = require('discord.js-commando');
-const { stripIndent, stripIndentTransformer } = require('common-tags');
+const { stripIndent } = require('common-tags');
 
 const CardNumber = require('./resources/CardNumber');
-const CardShape = require('./resources/CardShape');
-
 
 module.exports = class RuleCommand extends Command {
   constructor(client) {
@@ -40,25 +38,24 @@ module.exports = class RuleCommand extends Command {
         },
         {
           name:
-            `${CardNumber.red[3]} | 베팅은 다음과 같은 상황에서 끝납니다\n`
-            ,
+            `${CardNumber.red[3]} | 베팅은 다음과 같은 상황에서 끝납니다\n`,
           value:
             stripIndent`1. 한 플레이어가 레이즈를 한 경우
-             2. 한 플레이어가 포기(gg)를 한 경우
-             3. 한 플레이어가 모든 칩을 다 사용한 경우`,
+            2. 한 플레이어가 포기(gg)를 한 경우
+            3. 한 플레이어가 모든 칩을 다 사용한 경우`,
         },
         {
           name: `${CardNumber.red[4]} | 카드의 족보는 다음과 같습니다`,
           value:
-            `\t${CardNumber.black[14]} ${cardNumber.black[2]}`
+            `\t${CardNumber.black[14]} ${CardNumber.black[2]}`
             + `${CardNumber.black[3]} ${CardNumber.black[4]} `
             + `${CardNumber.black[5]} ${CardNumber.black[6]} `
             + `${CardNumber.black[7]} ${CardNumber.black[8]} `
-            + `${CardNumber.black[9]} ${CardNumber.black[10]} `
+            + `${CardNumber.black[9]} ${CardNumber.black[10]} `,
         },
         {
           name: `${CardNumber.red[5]} | 카드의 숫자가 같은 경우`,
-          value: `해당 라운드는 무효처리 되며 베팅한 칩은 다음 라운드로 그대로 넘어간 상태로 시작합니다`,
+          value: '해당 라운드는 무효처리 되며 베팅한 칩은 다음 라운드로 그대로 넘어간 상태로 시작합니다',
         },
       );
     msg.embed(highcardRuleEmbed);

@@ -28,7 +28,7 @@ module.exports = class BingsuMenuCommand extends Command {
       memberName: '빙수메뉴판',
       description: '빙수 정보를 가져옵니다.',
     });
-    client.on('message', message => {
+    client.on('message', (message) => {
       if (message.content === 's!빙수메뉴판' && message.author.id === '796342455762419712') {
         message.channel.send(embedBingsuMenu());
       }

@@ -15,14 +15,14 @@ module.exports = class GetBingsuCommand extends Command {
         },
       ],
     });
-    client.on('message', message => {
+    client.on('message', (message) => {
       if (message.content.startsWith('s!주문') && message.author.id === '796342455762419712') {
         message.channel.send(`${message.author}님, ${message.content.split(' ')[1]}주문 되었습니다.`);
       }
     });
   }
 
-  async run(msg, args) {
+  async run(msg) {
     msg.say('아직 루비 전용 커맨드입니다. 혹시 해당 서버에 루비(루비#7642)가 있다면 `./빙수먹자`를 입력해보세요.');
   }
 };
