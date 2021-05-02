@@ -24,3 +24,4 @@ module.exports = class HighcardHelpCommand extends Command {
     msg.embed(highcardHelpEmbed);
   }
 };
+//어...음 뭐지 저장은 했는데
