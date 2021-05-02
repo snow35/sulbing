@@ -65,4 +65,4 @@ client.registry
   .registerGroup('test', 'Test')
   .registerCommandsIn(path.join(__dirname, 'commands'));
 
-client.login(process.env.TOKEN);
+client.login('Nzk2MDUzODIyMzcxMzk3NjQy.X_SU5Q.lnlFGdDq8KhL08hAZAxB_8GPlBo');

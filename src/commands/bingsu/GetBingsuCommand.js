@@ -2,10 +2,35 @@ const Discord = require('discord.js');
 const { Command } = require('discord.js-commando');
 const fs = require('fs');
 const path = require('path');
+const { stripIndent } = require('common-tags');
 
 function getBingsuMenu() {
   const data = fs.readFileSync(path.join(__dirname, './resources/menu.json'));
   return JSON.parse(data).bingSu;
+}
+
+function embedBingsuInfo(bingsu) {
+  const menu = getBingsuMenu();
+  menu.forEach((item) => {
+    if (item.subname.includes(bingsu)) {
+      const bingSuInfoEmbed = new Discord.MessageEmbed()
+        .setColor('#ddbea9')
+        .setTitle(item.name)
+        .setThumbnail(item.img)
+        .setDescription(item.description)
+        .addField('제품명', item.name, true)
+        .addField('가격', `${item.cost}원`, true)
+        .addField('영양성분',
+          stripIndents`열량(Kcal): ${item.nutrition.calories}
+          당류(g): ${item.nutrition.sugars}
+          단백질(g): ${item.nutrition.protein}
+          포화지방(g): ${item.nutrition.saturatedFat}
+          나트륨(mg): ${item.nutrition.sodium}`
+        )
+        .addField('알레르기', item.allergy.join(', '));
+      return bingSuInfoEmbed;
+    }
+  });
 }
 
 module.exports = class GetBingsuCommand extends Command {
@@ -23,30 +48,14 @@ module.exports = class GetBingsuCommand extends Command {
         },
       ],
     });
+    client.on('message', message => {
+      if (message.content.startsWith('s!빙수') && message.author.id === '796342455762419712') {
+        message.channel.send(embedBingsuInfo(message.content.split(' ')[1]));
+      }
+    });
   }
 
   async run(msg, args) {
-    const menu = getBingsuMenu();
-    menu.forEach((item) => {
-      if (item.subname.includes(args.bingsu)) {
-        const bingSuInfoEmbed = new Discord.MessageEmbed()
-          .setColor('#ddbea9')
-          .setTitle(item.name)
-          .setThumbnail(item.img)
-          .setDescription(item.description)
-          .addField('제품명', item.name, true)
-          .addField('가격', `${item.cost}원`, true)
-          .addField(
-            '영양성분',
-            `열량(Kcal): ${item.nutrition.calories}\n`
-              + `당류(g): ${item.nutrition.sugars}\n`
-              + `단백질(g): ${item.nutrition.protein}\n`
-              + `포화지방(g): ${item.nutrition.saturatedFat}\n`
-              + `나트륨(mg): ${item.nutrition.sodium}`,
-          )
-          .addField('알레르기', item.allergy.join(', '));
-        msg.embed(bingSuInfoEmbed);
-      }
-    });
+    msg.embed(embedBingsuInfo(args.bingsu));
   }
 };

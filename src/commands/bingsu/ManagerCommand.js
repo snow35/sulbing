@@ -10,6 +10,14 @@ module.exports = class ManagerCommand extends Command {
       memberName: '점장',
       description: '인절미빙수 봇 명령어입니다.',
     });
+    client.on('message', message => {
+      if (message.content === 's!점장' && message.author.id === '796342455762419712') {
+        const helpEmbed = new Discord.MessageEmbed()
+          .setColor('#ddbea9')
+          .setTitle('안녕하세요, 설빙입니다 :)');
+        message.channel.send(helpEmbed);
+      }
+    });
   }
 
   async run(msg) {
