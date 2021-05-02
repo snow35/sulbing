@@ -17,8 +17,9 @@ module.exports = class HighcardHelpCommand extends Command {
       .setColor('#ddbea9')
       .setTitle(':black_joker: **HIGHCARD에 오신것을 환영합니다**')
       .addFields(
-        { name: ':page_facing_up:!Help', value: 'HGIHCARD기본 사용법입니다' },
-        { name: ':books:!Rules', value: 'HIGHCARD게임 룰을 설명해줘요' },
+        { name: ':question:Introduction', value: 'HIGHCARD는 "인디언 포커" 로 불리는 게임입니다! 많이 사용해주세요' },
+        { name: ':page_facing_up:s!Help', value: 'HGIHCARD기본 사용법입니다' },
+        { name: ':books:s!Rules', value: 'HIGHCARD게임 룰을 설명해줘요' },
       );
     msg.embed(highcardHelpEmbed);
   }
