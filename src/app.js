@@ -21,6 +21,8 @@ client
   .on('debug', log.log)
   .on('ready', () => {
     log.info(`Client ready; logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`);
+    client.user.setActivity('s!help를 입력해보세요.', { type: 'PLAYING' })
+      .then(presence => log.info(`Activity set to ${presence.activities[0].name}`))
   })
   .on('disconnect', () => {
     log.warn('Disconnected!');
