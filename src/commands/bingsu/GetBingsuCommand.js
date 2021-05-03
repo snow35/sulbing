@@ -11,7 +11,7 @@ function getBingsuMenu() {
 
 function embedBingsuInfo(bingsu) {
   const menu = getBingsuMenu();
-  const item = menu.filter(itemOfMenu => itemOfMenu.subname.includes(bingsu))[0];
+  const item = menu.filter((itemOfMenu) => itemOfMenu.subname.includes(bingsu))[0];
   const bingSuInfoEmbed = new Discord.MessageEmbed()
     .setColor('#ddbea9')
     .setTitle(item.name)
