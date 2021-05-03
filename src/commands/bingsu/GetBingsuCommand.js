@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { Command } = require('discord.js-commando');
 const fs = require('fs');
 const path = require('path');
-const { stripIndent } = require('common-tags');
+const { stripIndents } = require('common-tags');
 
 function getBingsuMenu() {
   const data = fs.readFileSync(path.join(__dirname, './resources/menu.json'));
@@ -20,7 +20,7 @@ function embedBingsuInfo(bingsu) {
     .addField('제품명', item.name, true)
     .addField('가격', `${item.cost.toLocaleString()}원`, true)
     .addField('영양성분',
-      stripIndent`열량(Kcal): ${item.nutrition.calories}
+      stripIndents`열량(Kcal): ${item.nutrition.calories}
       당류(g): ${item.nutrition.sugars}
       단백질(g): ${item.nutrition.protein}
       포화지방(g): ${item.nutrition.saturatedFat}
