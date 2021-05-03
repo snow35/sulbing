@@ -18,7 +18,7 @@ function embedBingsuInfo(bingsu) {
     .setThumbnail(item.img)
     .setDescription(item.description)
     .addField('제품명', item.name, true)
-    .addField('가격', `${item.cost}원`, true)
+    .addField('가격', `${item.cost.toLocaleString()}원`, true)
     .addField('영양성분',
       stripIndent`열량(Kcal): ${item.nutrition.calories}
       당류(g): ${item.nutrition.sugars}
