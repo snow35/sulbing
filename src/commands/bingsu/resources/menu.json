@@ -93,7 +93,7 @@
         {
             "name": "스윗캔디구슬설빙",
             "subname": "스윗캔디구슬설빙",
-            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=1988351642_zSil3KGe_81dd9a0d39cadf1c5b58ef935474e443504af4f3.png",
+            "img": "https://sulbing.com/data/file/menu/1988351642_zSil3KGe_81dd9a0d39cadf1c5b58ef935474e443504af4f3.png",
             "description": "핑크빛 달콤 머랭쿠키와 몽글몽글 솜사탕 맛 빙수",
             "cost": "190,030,000",
             "nutrition" :{
@@ -123,7 +123,7 @@
         {
             "name": "팥인절미설빙",
             "subname": "팥인절미설빙",
-            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=3554379581_GyKwkLXO_5231651cc619fb7027550bc2a4fd4a0902f1cd01.png",
+            "img": "https://sulbing.com/data/file/menu/3554379581_GyKwkLXO_5231651cc619fb7027550bc2a4fd4a0902f1cd01.png",
             "description": "전통의 맛을 살린 설빙. 달콤한 팥이 기본으로 들어가고 그 위에 고소한 콩고물과 쫄깃한 인절미 떡이 한가득 들어있는 인기만점 빙수!",
             "cost": 9900,
             "nutrition" :{
@@ -138,7 +138,7 @@
         {
             "name": "생딸기설빙",
             "subname": "생딸기설빙",
-            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=1988351642_AXh3VTcq_d8f37c2d098d2f0b62ae0a98cabe04e7824a937b.png",
+            "img": "https://sulbing.com/data/file/menu/1988351642_AXh3VTcq_d8f37c2d098d2f0b62ae0a98cabe04e7824a937b.png",
             "description": "생딸기의 상큼함과 자연의 맛을 조화롭게 담아 고객의 입맛을 사로잡은 생딸기 시리즈 원조제품",
             "cost": 11900,
             "nutrition" :{
@@ -153,7 +153,7 @@
         {
             "name": "초코브라우니설빙",
             "subname": ["초코브라우니설빙", "브라우니설빙"],
-            "img": "https://sulbing.com/bbs/view_image.php?bo_table=menu&fn=3554379581_hslKF8M7_d1146e492a298dfdb6fafb3bc3da0b8a9b73b1d8.png",
+            "img": "https://sulbing.com/data/file/menu/3554379581_hslKF8M7_d1146e492a298dfdb6fafb3bc3da0b8a9b73b1d8.png",
             "description": "바삭한 초코쿠키와 쫀득한 브라우니가 달콤한 초코 소스와 만나 남녀노소 부담 없이 즐길 수 있는 제품",
             "cost": 10900,
             "nutrition" :{
