@@ -43,7 +43,7 @@ module.exports = class PopListCommand extends Command {
             'https://www.youtube.com/playlist?list=PL81QvWaskBuvY3Mpj_9q4ZnnDL3S4qsfd',
         },
         {
-          name: ':spotify: | Spotify 추천 lofi 리스트입니다(마음에 들어서 끌고왔어요)',
+          name: '<:spotify:853774089470476309> | Spotify 추천 lofi 리스트입니다(마음에 들어서 끌고왔어요)',
           value:
             'https://youtube.com/playlist?list=PL81QvWaskBuves5kt1EE8HZSQ6-Gax0if',
         },
