@@ -47,6 +47,11 @@ module.exports = class PopListCommand extends Command {
           value:
             'https://youtube.com/playlist?list=PL81QvWaskBuves5kt1EE8HZSQ6-Gax0if',
         },
+        {
+          name: '<:spotify:853774089470476309> | Spotify 추천 pop 리스트입니다(마음에 들어서 끌고왔어요2)',
+          value:
+            'https://www.youtube.com/playlist?list=PL81QvWaskBusk5CgJFpwt4MRcGy81zIQSß',
+        },
       );
     msg.embed(playlistEmbed);
   }
